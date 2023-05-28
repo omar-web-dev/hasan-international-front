@@ -51,7 +51,7 @@ const Navbar = () => {
               <div className="flex items-center">
                 <Logo />
                 <div>
-                  <div>
+                  <div className="text-green-500">
                     <h1 className="text-5xl">HASAN INTERNATIONAL FZE</h1>
                     <h3 className="text-[20.6px]">
                       WATER TREATMENT PLANT AND MEDICAL EQUIPMENT SUPPLIER

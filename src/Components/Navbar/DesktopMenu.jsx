@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 
-function DesktopMenu() {
+function DesktopMenu({scrollPosition}) {
   return (
     <div className="lg:block hidden">
       {/************************ desktop menu start here *************************/}
 
-      <ul className="flex gap-11 mt-2 items-center">
+      <ul className="flex mt-2 items-center">
       {/************************  menu item *************************/}
         <li className="relative">
           <Link
-            className="flex pr-2 items-center uppercase text-[15px] font-Inter font-bold"
+            className={`${ scrollPosition > 0 ? " text-white hover:bg-white hover:text-green-500" : "text-green-500 hover:bg-green-500 hover:text-white"} flex py-2 px-5  items-center uppercase text-[15px] font-Inter font-bold`}
             to={"/home"}
           >
             Home
@@ -19,7 +19,7 @@ function DesktopMenu() {
 
         <li className="relative">
           <Link
-            className="flex items-center uppercase text-[15px] font-Inter font-bold"
+            className={`${ scrollPosition > 0 ? " text-white hover:bg-white hover:text-green-500" : "text-green-500 hover:bg-green-500 hover:text-white"} flex py-2 px-5  items-center uppercase text-[15px] font-Inter font-bold`}
             to={"/service"}
           >
             Service
@@ -28,7 +28,7 @@ function DesktopMenu() {
 
         <li className="relative">
           <Link
-            className="flex items-center uppercase text-[15px] font-Inter font-bold"
+            className={`${ scrollPosition > 0 ? " text-white hover:bg-white hover:text-green-500" : "text-green-500 hover:bg-green-500 hover:text-white"} flex py-2 px-5  items-center uppercase text-[15px] font-Inter font-bold`}
             to={"/about-us"}
           >
             About Us
@@ -36,7 +36,7 @@ function DesktopMenu() {
         </li>
         <li className="relative">
           <Link
-            className="flex items-center uppercase text-[15px] font-Inter font-bold"
+            className={`${ scrollPosition > 0 ? " text-white hover:bg-white hover:text-green-500" : "text-green-500 hover:bg-green-500 hover:text-white"} flex py-2 px-5  items-center uppercase text-[15px] font-Inter font-bold`}
             to={"/contact"}
           >
             Contact
@@ -44,7 +44,7 @@ function DesktopMenu() {
         </li>
         <li className="relative">
           <Link
-            className="flex items-center uppercase text-[15px] font-Inter font-bold"
+            className={`${ scrollPosition > 0 ? " text-white hover:bg-white hover:text-green-500" : "text-green-500 hover:bg-green-500 hover:text-white"} flex py-2 px-5  items-center uppercase text-[15px] font-Inter font-bold`}
             to={"/blog"}
           >
             Blog

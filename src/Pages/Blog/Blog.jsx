@@ -1,21 +1,24 @@
+import HeadImage from "../../Components/HeadImage/HeadImage";
 import BlogCard from "./BlogCard";
 
 const Blog = () => {
   return (
-    <div className="mt-20">
-      <div className="text-center max-w-[600px] mx-auto">
-        <h2 className="my_h2">Blog</h2>
-      
-      </div>
-      <div className="grid grid-cols-3 gap-10 my-10">
-        <BlogCard/>
-        <BlogCard/>
-        <BlogCard/>
-        <BlogCard/>
-        <BlogCard/>
-        <BlogCard/>
-      </div>
-    </div>
+    <>
+      <HeadImage
+        text={"Our Blog"}
+        image={
+          "https://hawkmed.com.cn/wp-content/uploads/2021/12/160610965300119296f.jpg"
+        }
+      />
+        <div className="max-w-[1200px] mx-auto grid grid-cols-3 gap-10 my-10">
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+        </div>
+    </>
   );
 };
 

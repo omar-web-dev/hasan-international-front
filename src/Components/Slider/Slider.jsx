@@ -6,13 +6,12 @@ import "./Slider.css";
 
 // import required modules
 import { Navigation } from "swiper";
-import SwiperSlideContent from "./SwiperSlideContent";
 
 export default function App() {
   return (
     <>
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-        <SwiperSlide className="h-[80vh]">
+        <SwiperSlide className="h-[100vh]">
           <img
             src="https://e7.pngegg.com/pngimages/562/852/png-clipart-hoodie-t-shirt-clothing-bluza-sweater-t-shirt-black-top.png"
             alt="car!"
@@ -32,7 +31,7 @@ export default function App() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="h-[80vh]">
+        <SwiperSlide className="h-[100vh]">
           <img
             src="https://e7.pngegg.com/pngimages/562/852/png-clipart-hoodie-t-shirt-clothing-bluza-sweater-t-shirt-black-top.png"
             alt="car!"

@@ -15,7 +15,7 @@ const Footer = () => {
   const handleSubscriber = () => {};
 
   return (
-    <footer className=" bg-gray-700">
+    <footer className=" bg-gray-800">
       <div className="container mx-auto py-8 px-8 max-w-[1200px] ">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-between">
           {/* *** first section */}

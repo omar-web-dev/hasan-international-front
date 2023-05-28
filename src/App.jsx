@@ -5,7 +5,7 @@ function App() {
   
 
   return (
-     <div className="mx-auto mt-[189px]">
+     <div>
          <RouterProvider router={routes} />
      </div>
       

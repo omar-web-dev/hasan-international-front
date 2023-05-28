@@ -1,12 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/main/Main";
 import Home from "../Pages/Home/Home";
-import About from "../Components/About/About";
-import Service from "../Components/Service/Service";
+import Service from "../Pages/Service/Service";
 import Singin from "../Components/Singin/Singin";
-import Contact from "../Components/Contact/Contact";
 import P404 from "../Pages/P404";
 import Blog from "../Pages/Blog/Blog";
+import Contact from "../Pages/Contact/Contact";
 
 const routes = createBrowserRouter([
   {
@@ -21,10 +20,10 @@ const routes = createBrowserRouter([
         path: "/home",
         element: <Home/>,
       },
-      {
-        path: "/about-us",
-        element: <About/>,
-      },
+      // {
+      //   path: "/about-us",
+      //   element: <About/>,
+      // },
       {
         path: "/blog",
         element: <Blog/>,
