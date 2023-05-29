@@ -6,6 +6,7 @@ import Singin from "../Components/Singin/Singin";
 import P404 from "../Pages/P404";
 import Blog from "../Pages/Blog/Blog";
 import Contact from "../Pages/Contact/Contact";
+import SingleProduct from "../Pages/SingleProduct/SingleProduct";
 
 const routes = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const routes = createBrowserRouter([
       {
         path: "/singin",
         element: <Singin/>,
+      },
+      {
+        path: "/single-product",
+        element: <SingleProduct/>,
       },
       
       {

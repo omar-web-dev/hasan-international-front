@@ -4,7 +4,7 @@ const OurProduct = () => {
   return (
     <div className="mt-20">
       <div className="text-center max-w-[600px] mx-auto">
-        <h2 className="my_h2">Our Products</h2>
+        <h2 className="my_h2">More Selling Products</h2>
         <p className="text-lg">
           A perfect blend of creativity, energy, communication, happiness and
           love. Let us arrange a smile for you.

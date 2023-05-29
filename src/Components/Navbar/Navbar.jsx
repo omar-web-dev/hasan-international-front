@@ -11,7 +11,6 @@ import Logo from "../Logo/logo";
 }
 
 const Navbar = () => {
-  const [sidebar, setSidebar] = useState(false);
 
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -29,7 +28,8 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="">
+      <div >
+        {/* navbar start hear */}
         <nav
           className={`z-50 w-full px-3 lg:relative ${
             scrollPosition > 0 ? "navbar-bg " : "primary-navbar"
@@ -45,11 +45,11 @@ const Navbar = () => {
           </div>
 
           <div className="max-w-[1200px] font-Cuprum py-3  text-black mx-auto">
-            {sidebar && <DesktopSidebar setSidebar={setSidebar} />}
+            {/* {sidebar && <DesktopSidebar setSidebar={setSidebar} />} */}
             <div className="flex justify-between items-center flex-col">
               {/* Logo Here */}
               <div className="flex items-center">
-                <Logo />
+                {/* <Logo /> */}
                 <div>
                   <div className="text-green-500">
                     <h1 className="text-5xl">HASAN INTERNATIONAL FZE</h1>

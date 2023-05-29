@@ -13,7 +13,7 @@ import BlogSection from "./BlogSection/BlogSection";
 
 const Home = () => {
   return (
-    <>
+    <div className="mt-[200px]">
       <SLider />
       <div className="max-w-[1200px] mx-auto">
         <ShippingArea />
@@ -28,7 +28,7 @@ const Home = () => {
         <BlogSection />
       </div>
       <Contact />
-    </>
+    </div>
   );
 };
 
