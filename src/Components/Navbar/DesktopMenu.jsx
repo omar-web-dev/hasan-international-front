@@ -7,16 +7,34 @@ function DesktopMenu({ scrollPosition }) {
 
       <ul className="flex mt-2 items-center">
         {/************************  menu item *************************/}
-        <li className="relative mx-8">
+        <li className="relative">
           <Link
-            className=" text-[#be2edd] hover:bg-[#0a0a0a] hover:text-[#06eb12] rounded-[15px] mx-2 py-2 px-4 items-center uppercase text-[15px] font-Inter font-bold"
+            className="text-[#be2edd] hover:bg-[#0a0a0a] hover:text-[#06eb12] rounded-[15px] mx-2 py-2 px-4 items-center uppercase text-[15px] font-Inter font-bold"
             to={"/home"}
           >
             Home
           </Link>
         </li>
 
-        <li className="relative mx-8">
+        <li className="relative">
+          <Link
+            className=" text-[#be2edd] hover:bg-[#0a0a0a] hover:text-[#06eb12] rounded-[15px] mx-2 py-2 px-4 items-center uppercase text-[15px] font-Inter font-bold"
+            to={"/about-us"}
+          >
+            About Us
+          </Link>
+        </li>
+
+        <li className="relative">
+          <Link
+            className=" text-[#be2edd] hover:bg-[#0a0a0a] hover:text-[#06eb12] rounded-[15px] mx-2 py-2 px-4 items-center uppercase text-[15px] font-Inter font-bold"
+            to={"/product"}
+          >
+            Product
+          </Link>
+        </li>
+
+        <li className="relative">
           <Link
             className=" text-[#be2edd] hover:bg-[#0a0a0a] hover:text-[#06eb12] rounded-[15px] mx-2 py-2 px-4 items-center uppercase text-[15px] font-Inter font-bold"
             to={"/service"}
@@ -25,28 +43,12 @@ function DesktopMenu({ scrollPosition }) {
           </Link>
         </li>
 
-        <li className="relative mx-8">
-          <Link
-            className=" text-[#be2edd] hover:bg-[#0a0a0a] hover:text-[#06eb12] rounded-[15px] mx-2 py-2 px-4 items-center uppercase text-[15px] font-Inter font-bold"
-            to={"/about-us"}
-          >
-            About Us
-          </Link>
-        </li>
-        <li className="relative mx-8">
+        <li className="relative">
           <Link
             className=" text-[#be2edd] hover:bg-[#0a0a0a] hover:text-[#06eb12] rounded-[15px] mx-2 py-2 px-4 items-center uppercase text-[15px] font-Inter font-bold"
             to={"/contact"}
           >
             Contact
-          </Link>
-        </li>
-        <li className="relative mx-8">
-          <Link
-            className=" text-[#be2edd] hover:bg-[#0a0a0a] hover:text-[#06eb12] rounded-[15px] mx-2 py-2 px-4 items-center uppercase text-[15px] font-Inter font-bold"
-            to={"/blog"}
-          >
-            Blog
           </Link>
         </li>
       </ul>
