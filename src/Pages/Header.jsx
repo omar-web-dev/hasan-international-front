@@ -1,9 +1,6 @@
 const Header = () => {
   return (
     <div className="bg-black pt-20">
-
-
-       
      <div className="flex flex-col justify-center items-center  py-16">
      <h1 className="text-white font-Inter font-bold lg:text-3xl text-xl text-center">
         JOIN 472,900 TRADERS

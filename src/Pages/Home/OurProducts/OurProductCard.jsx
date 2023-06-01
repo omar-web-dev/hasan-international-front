@@ -16,7 +16,6 @@ const OurProductCard = () => {
               <div className="icons absolute bottom-5">
                 <span className="icon add-card">Add to Card</span>
                 <span className="icon add-wishlist">Add to Wishlist</span>
-                <span className="icon buy-now">Buy Now</span>
               </div>
             </div>
           </div>

@@ -47,7 +47,7 @@ font-family: 'Work Sans', sans-serif; */
   position: absolute !important;
   transition: 0.5s linear;
   top: 0 !important;
-  background: rgba(35, 213, 139, 0.524);
+  color: white;
   box-shadow: 10px -15px 15px -15px rgba(118, 19, 19, 0.5);
 }
 .navbar-bg {
@@ -56,7 +56,7 @@ font-family: 'Work Sans', sans-serif; */
   z-index: 9999 !important;
   transition: 0.3s linear;
   /* background: rgba(5, 65, 206, 0.524); */
-  background: green;
+  background: #81ecec;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.7px);
   -webkit-backdrop-filter: blur(3.7px);
@@ -156,4 +156,18 @@ font-family: 'Work Sans', sans-serif; */
 
 .text_star {
   text-align: left;
+}
+
+
+.swiper-button-next,.swiper-button-prev {
+  color: white;
+  background-color: orange;
+  padding: 20px;
+  border-radius: 50%;
+  height: 15px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 20px !important;
 }

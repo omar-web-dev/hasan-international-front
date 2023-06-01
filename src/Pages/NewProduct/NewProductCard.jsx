@@ -5,7 +5,7 @@ const NewProductCard = () => {
   return (
     <>
       {/* new product card  */}
-      <div className="card  border hover:shadow-xl">
+      <div className="card mx-4 border hover:shadow-xl">
         {/* new product card  figure */}
         <figure>
           <div className="image-container">
@@ -18,7 +18,6 @@ const NewProductCard = () => {
               <div className="icons absolute bottom-5">
                 <span className="icon add-card">Add to Card</span>
                 <span className="icon add-wishlist">Add to Wishlist</span>
-                <span className="icon buy-now">Buy Now</span>
               </div>
             </div>
           </div>

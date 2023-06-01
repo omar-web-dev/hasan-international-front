@@ -1,7 +1,7 @@
 const Safety = () => {
   return (
     <div
-      className="bg-gradient-to-br from-green-500 to-blue-500"
+      className="mb-10 bg-gradient-to-br from-green-500 to-blue-500"
     >
       <div className="flex flex-col mx-auto lg:flex-row">
         <div

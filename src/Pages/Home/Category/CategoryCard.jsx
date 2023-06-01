@@ -4,7 +4,7 @@ const CategoryCard = () => {
   return (
     <>
 
-      <div className="rounded card w-96">
+      <div className="rounded card">
         {/* category card  figure*/}
 
         <figure>

@@ -33,8 +33,8 @@ const Footer = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Reiciendis velit temporibus expedita alias quae perferendis
               officiis consequatur ab iure voluptas?
-            </p>{" "}
-            <SocialIcons rounded='rounded'/>
+            </p>
+            {/* <SocialIcons rounded='rounded'/> */}
           </div>
           {/* *** meddle section */}
           <div className="w-full md:px-10 ">

@@ -8,8 +8,25 @@ const Category = () => {
         <div className="text-center max-w-[600px] mx-auto">
           <h2 className="my_h2">Category</h2>
         </div>
-        <div className="grid grid-cols-3 gap-10 my-10">
+        <div className="grid grid-cols-6 gap-10 my-10">
         {/* category card */}
+          <CategoryCard />
+          <CategoryCard />
+          <CategoryCard />
+          <CategoryCard />
+          <CategoryCard />
+          <CategoryCard />
+          <CategoryCard />
+          <CategoryCard />
+          <CategoryCard />
+          <CategoryCard />
+          <CategoryCard />
+          <CategoryCard />
+          <CategoryCard />
+          <CategoryCard />
+          <CategoryCard />
+          <CategoryCard />
+          <CategoryCard />
           <CategoryCard />
           <CategoryCard />
           <CategoryCard />

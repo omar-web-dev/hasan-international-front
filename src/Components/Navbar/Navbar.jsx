@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
-import DesktopSidebar from "./DesktopSidebar";
 import SocialIcons from "../SocialIcons/SocialIcons";
 import Logo from "../Logo/logo";
 
@@ -11,7 +10,6 @@ import Logo from "../Logo/logo";
 }
 
 const Navbar = () => {
-
   const [scrollPosition, setScrollPosition] = useState(0);
 
   {
@@ -28,39 +26,48 @@ const Navbar = () => {
 
   return (
     <>
-      <div >
+      <div>
         {/* navbar start hear */}
         <nav
           className={`z-50 w-full px-3 lg:relative ${
             scrollPosition > 0 ? "navbar-bg " : "primary-navbar"
           }`}
         >
-          <div
+          {/* <div
             className={`${
               scrollPosition > 0 ? "hidden" : "flex justify-end items-center"
             }`}
             style={{ transition: "0.3s" }}
           >
             <SocialIcons />
-          </div>
+          </div> */}
 
           <div className="max-w-[1200px] font-Cuprum py-3  text-black mx-auto">
-            {/* {sidebar && <DesktopSidebar setSidebar={setSidebar} />} */}
-            <div className="flex justify-between items-center flex-col">
-              {/* Logo Here */}
-              <div className="flex items-center">
-                {/* <Logo /> */}
-                <div>
-                  <div className="text-green-500">
-                    <h1 className="text-5xl">HASAN INTERNATIONAL FZE</h1>
-                    <h3 className="text-[20.6px]">
-                      WATER TREATMENT PLANT AND MEDICAL EQUIPMENT SUPPLIER
-                    </h3>
-                  </div>
-                  {/* Desktop Menu */}
-                  <DesktopMenu scrollPosition={scrollPosition} />
+            <div className="flex items-start justify-between">
+              <div className="w-28">
+                <Logo />
+              </div>
+              <div className="text-black flex justify-center">
+                <div
+                  className={`text-center ${
+                    scrollPosition > 0 ? "" : "text-white"
+                  } `}
+                >
+                  <h1 className="text-5xl mb-2">HASAN INTERNATIONAL FZE</h1>
+                  <h3 className="text-[20.6px] font-normal">
+                    WATER TREATMENT PLANT AND MEDICAL EQUIPMENT SUPPLIER
+                  </h3>
                 </div>
               </div>
+              <SocialIcons />
+            </div>
+
+            {/* Desktop Menu */}
+            <div className="flex justify-center flex-nowrap ">
+              <DesktopMenu scrollPosition={scrollPosition} />
+            </div>
+            <div className="flex justify-between">
+              {/* Logo Here */}
 
               <div>
                 {/* MobileMenu */}

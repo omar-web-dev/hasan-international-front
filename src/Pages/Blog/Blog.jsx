@@ -1,7 +1,15 @@
+import { useEffect } from "react";
 import HeadImage from "../../Components/HeadImage/HeadImage";
 import BlogCard from "./BlogCard";
 
 const Blog = () => {
+
+  useEffect(() => {
+    return () => {
+      document.title = "Hasan International / blog";
+    };
+  }, []);
+
   return (
     <>
       <HeadImage

@@ -1,11 +1,5 @@
-const Logo = () => {
-  return (
-    <img
-      className="h-12  mb-4"
-      src="https://png.pngtree.com/png-vector/20230222/ourmid/pngtree-hazrat-imam-hassan-png-image_6613897.png"
-      alt="Logo"
-    />
-  );
+export const Logo = () => {
+  return <img className="w-[100px]" src="https://i.ibb.co/mq715sx/Whats-App-Image-2023-05-30-at-12-17-33-PM.jpg" alt="Logo" border="0" />;
 };
 
 export default Logo;
