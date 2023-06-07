@@ -10,8 +10,10 @@ const Contact = () => {
           "https://hawkmed.com.cn/wp-content/uploads/2021/12/160610965300119296f.jpg"
         }
       />
-      <div>
-        <ContactForm/>
+      <div className="mt-28">
+
+
+        <ContactForm />
       </div>
     </>
   );

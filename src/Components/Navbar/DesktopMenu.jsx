@@ -9,7 +9,7 @@ function DesktopMenu({ scrollPosition }) {
         {/************************  menu item *************************/}
         <li className="relative">
           <Link
-            className="text-[#be2edd] hover:bg-[#0a0a0a] hover:text-[#06eb12] rounded-[15px] mx-2 py-2 px-4 items-center uppercase text-[15px] font-Inter font-bold"
+            className="text-[#f2b5ff] hover:bg-[#0a0a0a] hover:text-[#06eb12] rounded-[15px] mx-2 py-2 px-4 items-center uppercase text-[15px] font-Inter font-bold"
             to={"/home"}
           >
             Home
@@ -18,7 +18,7 @@ function DesktopMenu({ scrollPosition }) {
 
         <li className="relative">
           <Link
-            className=" text-[#be2edd] hover:bg-[#0a0a0a] hover:text-[#06eb12] rounded-[15px] mx-2 py-2 px-4 items-center uppercase text-[15px] font-Inter font-bold"
+            className=" text-[#f2b5ff] hover:bg-[#0a0a0a] hover:text-[#06eb12] rounded-[15px] mx-2 py-2 px-4 items-center uppercase text-[15px] font-Inter font-bold"
             to={"/about-us"}
           >
             About Us
@@ -27,7 +27,7 @@ function DesktopMenu({ scrollPosition }) {
 
         <li className="relative">
           <Link
-            className=" text-[#be2edd] hover:bg-[#0a0a0a] hover:text-[#06eb12] rounded-[15px] mx-2 py-2 px-4 items-center uppercase text-[15px] font-Inter font-bold"
+            className=" text-[#f2b5ff] hover:bg-[#0a0a0a] hover:text-[#06eb12] rounded-[15px] mx-2 py-2 px-4 items-center uppercase text-[15px] font-Inter font-bold"
             to={"/product"}
           >
             Product
@@ -36,7 +36,7 @@ function DesktopMenu({ scrollPosition }) {
 
         <li className="relative">
           <Link
-            className=" text-[#be2edd] hover:bg-[#0a0a0a] hover:text-[#06eb12] rounded-[15px] mx-2 py-2 px-4 items-center uppercase text-[15px] font-Inter font-bold"
+            className=" text-[#f2b5ff] hover:bg-[#0a0a0a] hover:text-[#06eb12] rounded-[15px] mx-2 py-2 px-4 items-center uppercase text-[15px] font-Inter font-bold"
             to={"/service"}
           >
             Service
@@ -45,7 +45,7 @@ function DesktopMenu({ scrollPosition }) {
 
         <li className="relative">
           <Link
-            className=" text-[#be2edd] hover:bg-[#0a0a0a] hover:text-[#06eb12] rounded-[15px] mx-2 py-2 px-4 items-center uppercase text-[15px] font-Inter font-bold"
+            className=" text-[#f2b5ff] hover:bg-[#0a0a0a] hover:text-[#06eb12] rounded-[15px] mx-2 py-2 px-4 items-center uppercase text-[15px] font-Inter font-bold"
             to={"/contact"}
           >
             Contact

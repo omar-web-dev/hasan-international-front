@@ -5,6 +5,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body{
+  background-attachment: #bdc3c7;
+}
+
 /* @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Roboto&family=Work+Sans&display=swap");
 
@@ -114,7 +118,7 @@ font-family: 'Work Sans', sans-serif; */
 .medium_header,
 .my_h2 {
   font-family: "Roboto", sans-serif;
-  font-size: 48px;
+  font-size: 38px;
   font-weight: 700;
   text-transform: capitalize;
   line-height: 60px;

@@ -2,12 +2,14 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/main/Main";
 import Home from "../Pages/Home/Home";
 import Service from "../Pages/Service/Service";
-import Singin from "../Components/Singin/Singin";
+import SingIn from "../Components/SingIn/SingIn";
 import P404 from "../Pages/P404";
 import Blog from "../Pages/Blog/Blog";
 import Contact from "../Pages/Contact/Contact";
 import SingleProduct from "../Pages/SingleProduct/SingleProduct";
 import About from "../Pages/About/About";
+import Product from "../Pages/Product/product";
+import Registration from "../Components/Registration";
 
 const routes = createBrowserRouter([
   {
@@ -39,11 +41,19 @@ const routes = createBrowserRouter([
         element: <Service/>,
       },
       {
-        path: "/singin",
-        element: <Singin/>,
+        path: "/product",
+        element: <Product/>,
       },
       {
-        path: "/single-product",
+        path: "/sing-in",
+        element: <SingIn/>,
+      },
+      {
+        path: "/sing-up",
+        element: <Registration/>,
+      },
+      {
+        path: "/single-product/:id",
         element: <SingleProduct/>,
       },
       

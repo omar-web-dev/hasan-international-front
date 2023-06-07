@@ -1,17 +1,17 @@
-import { Link } from "react-router-dom";
 import "./NewProductCard.css";
 
-const NewProductCard = () => {
+
+const NewProductCard = ({product}) => {
   return (
     <>
       {/* new product card  */}
-      <div className="card mx-4 border hover:shadow-xl">
+      <div className="card mx-1 border hover:shadow-xl">
         {/* new product card  figure */}
         <figure>
-          <div className="image-container">
+          <div className="">
             <img
-              className="w-[100%] h-full"
-              src="https://bmabazar.com/wp-content/uploads/2019/07/t-1.jpg"
+              className="w-[400px]"
+              src={product.img}
               alt="car!"
             />
             <div className="image-overlay">
@@ -23,19 +23,18 @@ const NewProductCard = () => {
           </div>
         </figure>
         {/* new product card  body */}
-        <div className="card-body">
-          <h2 className="card-title">This is good product in this world</h2>
+        {/* <div className="card-body"> */}
+          {/* <h2 className="card-title">This is good product in this world</h2>
           <div className="flex justify-between">
             <p>Price : $200</p>
             <p className="text-end">Rating : 5.3</p>
-          </div>
-        </div>
-        <Link
-          className="text-center bg-blue-500 b p-2 text-xl text-white "
-          to="../single-product"
+          </div> */}
+        {/* </div> */}
+        <button
+          className="mt-1 text-center bg-blue-500 b p-2 text-xl text-white "
         >
           See more
-        </Link>
+        </button>
       </div>
     </>
   );

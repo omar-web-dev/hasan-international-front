@@ -1,15 +1,8 @@
-import ShippingArea from "./ShippingArea";
-import OurProduct from "./OurProducts/OurProducts";
-import Therapy from "./Therapy";
-import Category from "./Category/Category";
-import Safety from "./Safety";
-import Intelligence from "./Intelligence";
-import Contact from "./ContactSection/ContactSection";
-import Header from "./Header/Header";
-import MySlider from "../../Components/MySlider/MySlider";
 import { useEffect } from "react";
 
 import { NewProduct } from "../NewProduct/NewProduct";
+import Application from "../Application";
+import Brand from "../Brands/Brands";
 // import { NewProduct } from "../NewProduct/NewProduct";
 
 const Home = () => {
@@ -20,22 +13,12 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
-      <Header />
-      <MySlider/>
+    <div className="pt-32 bg-[#bdc3c7]">
       <div className="max-w-[1200px] mx-auto">
-        <ShippingArea />
         <NewProduct />
-        {/* <HawkMedical />
-        <HawkMedical2 /> */}
-        <OurProduct />
-        <Therapy />
-        <Category />
-        <Intelligence />
-        <Safety />
-        {/* <BlogSection /> */}
+        <Application/>
+        <Brand />
       </div>
-      <Contact />
     </div>
   );
 };
