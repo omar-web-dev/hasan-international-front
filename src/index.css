@@ -65,6 +65,21 @@ font-family: 'Work Sans', sans-serif; */
   backdrop-filter: blur(3.7px);
   -webkit-backdrop-filter: blur(3.7px);
 }
+
+
+
+.props-bg {
+  position: fixed !important;
+  top: 0px !important;
+  z-index: 9999 !important;
+  /* transition: 0.3s linear; */
+  /* background: rgba(5, 65, 206, 0.524); */
+  background:  rgba(0, 0, 0, 0.403);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  /* backdrop-filter: blur(3.7px); */
+  /* -webkit-backdrop-filter: blur(3.7px); */
+}
+
 .animation{
   transition: 0.3s linear;
 }

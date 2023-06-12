@@ -14,7 +14,7 @@ const SocialIcons = () => (
   <div className="flex gap-2 justify-end">
     {/************************ Social components start hear *************************/}
     {/* Singin button */}
-    <WithButton color="black" bg="bg-yellow-500" submitValue={"Singin"} />
+    <WithButton color="black" bg="bg-yellow-500" submitValue={"Sign In"} />
     <Link
       to="#"
       target="_blank"

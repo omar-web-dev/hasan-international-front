@@ -10,6 +10,7 @@ import SingleProduct from "../Pages/SingleProduct/SingleProduct";
 import About from "../Pages/About/About";
 import Product from "../Pages/Product/product";
 import Registration from "../Components/Registration";
+import MyCarts from "../Pages/About/MyCarts";
 
 const routes = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const routes = createBrowserRouter([
       {
         path: "/single-product/:id",
         element: <SingleProduct/>,
+      },
+      {
+        path: "/my-carts",
+        element: <MyCarts/>,
       },
       
       {
