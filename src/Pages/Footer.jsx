@@ -1,6 +1,7 @@
 import { FaCaretRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Payments from "./Payments/Payments";
+import { FiMail, FiPhoneCall } from "react-icons/fi";
 
 const Footer = () => {
   const footerItems = [
@@ -42,6 +43,30 @@ const Footer = () => {
           <p className="text-white text-center -mt-8">
             © Hasan International fze. All Rights Reserved
           </p>
+          <div className={`mt-4 -mb-10 flex flex-col justify-end `}>
+                    <p
+                      className={`text-end text-md text-white`}
+                    >
+                      Level 9, The office 4, One Central, <br /> World Trade
+                      Center, Dubai-UAE
+                    </p>
+                    <div className={`flex items-center justify-end`}>
+                      <FiMail className="mr-2 text-md text-[#3498db]" />
+                      <p
+                        className={"text-[18px]"}
+                      >
+                        hasaninternational2020@gmail.com{" "}
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-end">
+                      <FiPhoneCall className="mr-2  text-green-300 " />
+                      <p
+                        className={"text-[18px]"}
+                      >
+                        +971566258802 || +971561758023
+                      </p>
+                    </div>
+                  </div>
         </div>
       </footer>
     </>

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { FiMail, FiPhoneCall } from "react-icons/fi";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import SocialIcons from "../SocialIcons/SocialIcons";
 import Logo from "../Logo/logo";
+import { FaCartArrowDown } from "react-icons/fa";
 
 {
   /************** Navbar start here *****************/
@@ -34,72 +34,44 @@ const Navbar = () => {
           }`}
         >
           <div className=" bg-[#242a44]">
-            <div className="font-Cuprum py-3 max-w-[1200px] bg-[#242a44] text-black mx-auto ">
+            <div className=" py-3 max-w-[1200px] bg-[#242a44] text-black mx-auto ">
               <div className="flex items-start justify-between">
                 <div className="flex items-center">
                   <div className="w-28">
                     <Logo />
                   </div>
-                  <div className="text-black flex justify-center">
-                    <div
-                      className={`text-center ${
-                        scrollPosition > 10000 ? "" : "text-white"
-                      } `}
-                    >
-                      <h1 className="text-[52.4px] -mb-2">
-                        HASAN INTERNATIONAL FZE
+                  <div className="text-black ">
+                    <div className={`text-center -ml-4 text-white `}>
+                      <h1 className="text-[40px] capitalize -mb-3 -mt-2 ">
+                        hasan international FZE
                       </h1>
                       <h3
-                        className={`text-[22.3px] font-normal ${
-                          scrollPosition > 10000
-                            ? "text-[#433302]"
-                            : "text-[yellow]"
-                        }   `}
+                        className={`text-[14px] font-normal capitalize text-[#81ecec]`}
                       >
-                        WATER TREATMENT PLANT AND MEDICAL EQUIPMENT SUPPLIER
+                        water treatment plant & medical equipment manufacturer &
+                        supplier
                       </h3>
+                      <div className="flex flex-nowrap -ml-1 ">
+                        <DesktopMenu scrollPosition={scrollPosition} />
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className="">
-                  <SocialIcons />
-                  <div className={`mt-4 -mb-10 flex flex-col justify-end `}>
-                    <p
-                      className={`text-end text-md  ${
-                        scrollPosition > 10000 ? " " : "text-white"
-                      }`}
-                    >
-                      Level 9, The office 4, One Central, <br /> World Trade
-                      Center, Dubai-UAE
-                    </p>
-                    <div className={`flex items-center justify-end`}>
-                      <FiMail className="mr-2 text-md text-[#3498db]" />
-                      <p
-                        className={`text-[18px]  ${
-                          scrollPosition > 10000 ? " " : "text-white"
-                        }`}
-                      >
-                        hasaninternational2020@gmail.com{" "}
-                      </p>
-                    </div>
-                    <div className="flex items-center justify-end">
-                      <FiPhoneCall className="mr-2  text-green-300 " />
-                      <p
-                        className={`text-[18px]  ${
-                          scrollPosition > 10000 ? " " : "text-white"
-                        }`}
-                      >
-                        +971566258802 || +971561758023
-                      </p>
+                <div>
+                  <div className="">
+                    <SocialIcons />
+                  </div>
+                  <div className="flex justify-end">
+                    <div className="relative h-8 w-10 mt-5">
+                      <FaCartArrowDown className=" h-8 w-8 text-white" />
+                      <span className="absolute -top-3 right-0 w-5 h-5 text-[12px] justify-center items-center flex text-white rounded-full bg-[#EA2027]">
+                        10
+                      </span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Desktop Menu */}
-              <div className="flex flex-nowrap ml-[88px]">
-                <DesktopMenu scrollPosition={scrollPosition} />
-              </div>
               <div className="flex justify-between">
                 {/* Logo Here */}
 

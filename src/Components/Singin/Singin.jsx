@@ -12,7 +12,7 @@ const SingIn = () => {
   return (
     <div className="mx-auto p-8 pt-48 shadow-md bg-gray-300 rounded-md">
       <div className="max-w-[800px] bg-white shadow-md rounded-lg p-10 mx-auto">
-        <h2 className="text-2xl font-bold mb-4">Sing In</h2>
+        <h2 className="text-2xl font-bold mb-4">Sign In</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block mb-2 font-medium">
