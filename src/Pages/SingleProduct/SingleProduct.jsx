@@ -1,8 +1,8 @@
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
-import { FaRegTimesCircle } from "react-icons/Fa";
 import product1 from "../../assets/app-1.jpeg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaRegTimesCircle } from "react-icons/fa";
 
 const SingleProduct = () => {
   const [quantity, setQuantity] = useState(1);
