@@ -30,18 +30,15 @@ const About = () => {
 
   return (
     <div className="bg-[#bdc3c7] ">
-      
-      <div className="pt-44 ">
-        <div className="flex">
-          <div className="w-3/5 bg-[#bdc3c7] ">
-            <h2 className=" my_h2 text-[#5f27cd] ">About us</h2>
-          </div>
+      <div className="pt-3 ">
+        <div className=" bg-[#bdc3c7] ">
+          <h2 className=" my_h2 text-[#5f27cd] ">About us</h2>
         </div>
       </div>
-      <div className="max-w-[1200px] mx-auto pb-10">
-        <div className="flex">
-          <div className="w-3/5 h-[122.4vh] overflow-y-scroll mr-14">
-            <p className="text-[18px] text-justify pr-2">
+      <div className="max-w-[1200px] mx-auto mt-3 lg:pb-10">
+        <div className="lg:flex">
+          <div className="lg:w-3/5 lg:h-[122.4vh] lg:overflow-y-scroll lg:mr-14 md:px-5 px-3">
+            <p className="text-[18px] text-justify lg:pr-2">
               <span className="font-semibold"> Hasan International FZE</span> as
               a Water treatment plant and medical equipment supplying and
               manufacturing company, also supplying water ¬filtration media,
@@ -50,17 +47,18 @@ const About = () => {
               solutions for people, hospital and places all over the world. From
               its humble beginnings as a one man engineer shop to today’s full
               factory with a team of top engineers, sales and support staff that
-              vision has remained the same. <br /> <br /> A water treatment supplier
-              and manufacturer and also supply water fi¬ltration media, water
-              ¬filter, medical disposable and solar panel that has always prided
-              itself on using top of the line components from Dow Filmtech
-              membrane, Hydranautics membrane, Toray membrane, GE membrane, Koch
-              membrane, Grundfos, CNP, China land, SMA, JFY, Outback and many
-              more. A company that has consistently embraced ethical business
-              practices at every point in the design, build and delivery, and a
-              company that has a well-rounded, multi-lingual team of passionate
-              people behind every facet and weld going into these industrial /
-              commercial / medical grade water purification systems. <br /> <br />
+              vision has remained the same. <br /> <br /> A water treatment
+              supplier and manufacturer and also supply water fi¬ltration media,
+              water ¬filter, medical disposable and solar panel that has always
+              prided itself on using top of the line components from Dow
+              Filmtech membrane, Hydranautics membrane, Toray membrane, GE
+              membrane, Koch membrane, Grundfos, CNP, China land, SMA, JFY,
+              Outback and many more. A company that has consistently embraced
+              ethical business practices at every point in the design, build and
+              delivery, and a company that has a well-rounded, multi-lingual
+              team of passionate people behind every facet and weld going into
+              these industrial / commercial / medical grade water purification
+              systems. <br /> <br />
               <span className="font-semibold">Business Scope:</span> Water
               treatment plant, Seawater desalination plant, solar powered water
               treatment plant, Solar Panel, Solar Controller, Solar Inverter,
@@ -84,9 +82,9 @@ const About = () => {
               desalination plant, solar panel, inverter etc
             </p>
           </div>
-          <div className="w-2/5">
+          <div className="lg:w-2/5">
             {/* <Application/> */}
-            <div className="grid grid-cols-2 gap-5 ml-5">
+            <div className="grid md:grid-cols-2 gap-5 lg:ml-5 px-3 md:px-5 mt-4 lg:mt-0">
               {appData.map((item) => (
                 <div key={item.id} className="bg-white p-4 rounded shadow">
                   <img
@@ -106,7 +104,7 @@ const About = () => {
 
       <div className="bg-[#bdc3c7]">
         <div className=" max-w-[1200px] mx-auto">
-        <Brand />
+          <Brand />
         </div>
       </div>
     </div>

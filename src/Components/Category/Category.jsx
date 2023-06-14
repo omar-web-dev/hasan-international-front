@@ -3,7 +3,6 @@ import { useState } from "react";
 const Category = ({ name, subCategories, subSubCategories }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -14,42 +13,53 @@ const Category = ({ name, subCategories, subSubCategories }) => {
 
   return (
     <div
-      className="category "
+      className="category"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <ul>
-        <li className="py-1 ">
-          <p className="py-1 px-2 border w-full">{name}</p>
-        </li>
-        <li>
-          <ul>
-            <li>
-              {isHovered && (
-                <div className="h-[65vh]  sub-categories absolute top-0 left-[230px] w-[230px] bg-white">
-                  {subCategories &&
-                    subCategories.map((subCategory, i) => (
-                      <Category
-                        key={i * 2}
-                        name={subCategory.name}
-                        subSubCategories={subCategory.subSubCategories}
-                      />
-                    ))}
-                  {subSubCategories && (
-                    <div className="h-[65vh] absolute top-0 left-[20px] w-[300px] bg-white">
-                      {subSubCategories.map((subSubCategory, i) => (
-                        <p className="py-1 px-2 my-1 border w-full" key={i * 3}>{subSubCategory}</p>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              )}
-            </li>
-          </ul>
+      <ul className="text-black hover:text-[#0652DD]">
+        <li className="py-1">
+          <strong>
+            <p
+              className={`py-1 px-2 border w-full ${
+                subCategories ? "" : "cursor-pointer"
+              } `}
+            >
+              {name}
+            </p>
+          </strong>
         </li>
       </ul>
+      {/* {subCategories &&  */}
+      <ul>
+        <li className="bg-[#5758BB]">
+          {isHovered && (
+            <div className="h-[75vh] sub-categories absolute top-0 left-[230px] w-[230px] bg-white">
+              {subCategories &&
+                subCategories?.map((subCategory, i) => (
+                  <Category
+                    key={i * 2}
+                    name={subCategory.name}
+                    subSubCategories={subCategory.subSubCategories}
+                  />
+                ))}
+              {subSubCategories && isHovered && (
+                <div className="h-[75vh] absolute top-0 left-[20px] w-[300px] bg-white">
+                  {subSubCategories.map((subSubCategory, i) => (
+                    <p className="py-1 px-2 my-1 border w-full" key={i * 3}>
+                      {subSubCategory}
+                    </p>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+        </li>
+      </ul>
+      {/* } */}
     </div>
   );
 };
+
 
 export default Category;

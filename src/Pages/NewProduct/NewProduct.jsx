@@ -11,7 +11,6 @@ import product4 from "../../assets/new-products/product-4.jpeg";
 import product5 from "../../assets/new-products/product-5.jpeg";
 import product6 from "../../assets/new-products/product-6.jpeg";
 import product7 from "../../assets/new-products/product-7.jpeg";
-import product8 from "../../assets/new-products/product-8.jpeg";
 
 SwiperCore.use([Navigation]);
 
@@ -39,11 +38,11 @@ export const NewProduct = () => {
   }, []);
 
   return (
-    <div className="mt-20">
+    <div className="pt-4">
       <div className="text-center max-w-[600px] mx-auto">
         <h2 className="my_h2">New Products</h2>
       </div>
-      <div className="my-10">
+      <div className="mt-4">
         <Swiper className="h-full px-3" ref={swiperRefDes}>
           <div className="swiper-wrapper">
             {/* show last added 10 product */}

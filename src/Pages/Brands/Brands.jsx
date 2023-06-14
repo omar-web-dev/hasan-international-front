@@ -13,12 +13,13 @@ import brand11 from "../../assets/brand/brand-11.jpg";
 
 const Brand = () => {
   const brands = [
-    { id: 1, img: brand1, title: "brand 1" },
     { id: 2, img: brand2, title: "brand 2" },
     { id: 3, img: brand3, title: "brand 3" },
     { id: 4, img: brand4, title: "brand 4" },
     { id: 5, img: brand5, title: "brand 5" },
     { id: 6, img: brand6, title: "brand 6" },
+    { id: 1, img: brand1, title: "brand 1" },
+    { id: 1, img: brand1, title: "brand 1" },
     { id: 7, img: brand7, title: "brand 7" },
     { id: 8, img: brand8, title: "brand 8" },
     { id: 9, img: brand9, title: "brand 9" },
@@ -29,12 +30,12 @@ const Brand = () => {
   return (
     <>
       {/* this is a Brand section */}
-      <div className=" pb-3">
-        <div className="bg-[#a67ba1] rounded-md">
-          <div className=" text-center max-w-[600px] mx-auto">
+      <div className="py-6">
+        <div className="pb-4">
+          <div className="pb-4 text-center max-w-[600px] mx-auto">
             <h2 className="my_h2">Our Brand</h2>
           </div>
-          <div className="px-3 grid-cols-6 gap-4 py-10 pt-3 flex items-center justify-center">
+          <div className="grid grid-cols-4 bg-[#a67ba1] rounded-md px-3 md:px-5 md:grid-cols-6 gap-4 py-3 lg:flex items-center justify-center">
             {/* Brand card */}
             {brands.map((brand) => (
               <BrandCard brand={brand} key={brand.id} />

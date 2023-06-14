@@ -13,7 +13,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="pt-32 bg-[#bdc3c7]">
+    <div className="bg-[#bdc3c7]">
       <div className="max-w-[1200px] mx-auto">
         <NewProduct />
         <Application/>

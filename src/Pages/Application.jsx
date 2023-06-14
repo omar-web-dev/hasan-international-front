@@ -21,12 +21,12 @@ const Application = () => {
   ]
 
   return (
-    <div className="pb-20">
+    <div>
       {/* show only 8 cards this  */}
-      <div className="text-center max-w-[600px] mx-auto mt-20 mb-30">
-        <h2 className="my_h2 mb-10">Application</h2>
+      <div className="text-center max-w-[600px] mx-auto mt-6">
+        <h2 className="my_h2 mb-6">Application</h2>
       </div>
-      <div className="grid grid-cols-4 gap-3 justify-justify-between">
+      <div className="grid grid-cols-1 md:grid-cols-2 px-3 lg:grid-cols-4 gap-3 justify-justify-between">
       {appData.map((item) => (
         <div key={item.id} className="bg-white p-4 rounded shadow">
           <img src={item.img} alt={item.title} className="w-full h-auto mb-2" />

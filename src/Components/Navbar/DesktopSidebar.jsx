@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 import { RxCross2 } from "react-icons/rx";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { AiOutlineTwitter } from "react-icons/ai";
-function DesktopSidebar({ navItems, setSidebar }) {
+import PropTypes from 'prop-types';
+
+const DesktopSidebar = ({ navItems, setSidebar }) => {
   const location = useLocation();
 
   return (
@@ -76,5 +78,12 @@ function DesktopSidebar({ navItems, setSidebar }) {
     </motion.div>
   );
 }
+
+// ==================== types handling  ===================\\
+
+DesktopSidebar.propTypes = {
+  navItems: PropTypes.array.isRequired,
+  setSidebar: PropTypes.array.isRequired,
+};
 
 export default DesktopSidebar;

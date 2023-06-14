@@ -16,11 +16,11 @@ const Payments = () => {
   return (
     <>
       {/* this is a Brand section */}
-      <div className="flex gap-2 items-center justify-end">
+      <div className="flex gap-2 items-center lg:justify-end justify-center">
         {/* Brand card */}
         {brands.map((brand) => (
           <div key={brand.id}>
-            <img className="rounded-lg h-[70px] w-24" src={brand.img} alt="car!" />
+            <img className="rounded-lg h-[40px] w-[60px]" src={brand.img} alt="car!" />
           </div>
         ))}
       </div>

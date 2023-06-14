@@ -17,29 +17,31 @@ const Service = () => {
 
   return (
     <div className="bg-[#bdc3c7] pb-10">
-      <div className="pt-44 ">
-        <div className="flex">
-          <div className="w-3/5 bg-[#bdc3c7] ">
-            <h2 className=" my_h2 text-[#5f27cd] ">Service</h2>
-          </div>
-        </div>
+      <div className="bg-[#bdc3c7] ">
+        <h2 className=" my_h2 text-[#5f27cd] ">Service</h2>
       </div>
       <div className="max-w-[1200px] mx-auto">
-        <div className="flex">
-          <div className="w-1/2 h-[122.4vh]  mr-14">
-            <p className="text-[18px] text-justify pr-2">
+        <div className="lg:flex px-3 md:px-5">
+          <div className="lg:w-1/2 lg:h-[122.4vh]  lg:mr-14">
+            <p className="text-[18px] text-justify lg:pr-2">
               <span className="font-semibold"> 1. Services</span> <br />
               Hasan International Provide Integrated Service Solution.
               <br />
               <br />
-              <span className="font-semibold">2. Heamodialysis Unit Setup</span> <br />
+              <span className="font-semibold">
+                2. Heamodialysis Unit Setup
+              </span>{" "}
+              <br />
               We provided world class heamodialysis unit concept with design and
               dialysis machine, dialysis water treatment plant, dialyzer, blood
               line, fistula needle, dialysis catheter, dialyzer reuse machine,
               and dialyzer reprocessing machine supplier.
               <br />
               <br />
-              <span className="font-semibold">3. Installation and Comission</span> <br />
+              <span className="font-semibold">
+                3. Installation and Comission
+              </span>{" "}
+              <br />
               Hasan International provide quality and quick design, installation
               and commissioning service.
               <br />
@@ -57,9 +59,8 @@ const Service = () => {
               system, Water desalination plant, Hospital equipment setup etc.
             </p>
           </div>
-          <div className="w-1/2">
-            {/* <Application/> */}
-            <div className="grid  gap-5 ml-32 -mt-10">
+          <div className="lg:w-1/2">
+            <div className="grid gap-5 mt-3 lg:mt-3 lg:ml-32">
               {appData.map((item) => (
                 <div key={item.id} className="bg-white px-4 rounded shadow">
                   <img
