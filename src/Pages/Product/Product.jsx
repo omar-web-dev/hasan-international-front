@@ -216,7 +216,7 @@ const Product = () => {
           <button className="text-xl" onClick={toggleOpen}>{isOpen ? "Close" : "Category"}</button>
           {isOpen && (
             <div className="absolute">
-              <div className="w-full top-0 app px-2 relative h-[100vh] bg-white mr-1">
+              <div className="w-full top-0 app px-2 relative h-[56vh] md:h-[350px] lg:h-[75vh] bg-white mr-1">
                 {categories.map((category, i) => (
                   <Category
                     key={i}

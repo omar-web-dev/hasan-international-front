@@ -1,6 +1,6 @@
 import NewProductCard from "./NewProductCard";
 import { useEffect, useRef } from "react";
-import SwiperCore, { Navigation } from "swiper";
+import SwiperCore, {Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
 import "swiper/css/bundle";
@@ -33,9 +33,15 @@ export const NewProduct = () => {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      loop: true,
+      autoplay: {
+        delay: 1500, // Delay between slides in milliseconds (2 seconds)
+        disableOnInteraction: true, // Allow user interaction to pause autoplay
+      },
+      modules: [Autoplay, Navigation],
     });
 
-    const  getSlidesPerView = ( ) => {
+    function getSlidesPerView() {
       const screenWidth = window.innerWidth;
       if (screenWidth >= 1024) {
         return 4; // Large desktop - 4 slides per view

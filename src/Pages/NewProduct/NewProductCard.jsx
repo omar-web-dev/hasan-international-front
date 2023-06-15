@@ -5,7 +5,7 @@ const NewProductCard = ({ product }) => {
   return (
     <>
       {/* new product card  */}
-      <div className="card rounded-2xl  mx-1 border hover:shadow-xl">
+      <div className="card rounded-2xl  md:mx-1 border hover:shadow-xl">
         {/* new product card  figure */}
         <figure>
           <div >
