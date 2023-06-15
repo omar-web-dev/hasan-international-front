@@ -34,7 +34,7 @@ const Category = ({ name, subCategories, subSubCategories }) => {
       <ul>
         <li className="bg-[#5758BB]">
           {isHovered && (
-            <div className="h-[75vh] sub-categories absolute top-0 left-[230px] w-[230px] bg-white">
+            <div className="md:h-[75vh]  h-[100vh] sub-categories absolute top-0 left-1/4 w-3/4 md:left-[230px] md:w-[230px] bg-white">
               {subCategories &&
                 subCategories?.map((subCategory, i) => (
                   <Category
@@ -44,7 +44,7 @@ const Category = ({ name, subCategories, subSubCategories }) => {
                   />
                 ))}
               {subSubCategories && isHovered && (
-                <div className="h-[75vh] absolute top-0 left-[20px] w-[300px] bg-white">
+                <div className="h-[75vh] w-full absolute top-0 lg:px-4 md:w-[300px] bg-white">
                   {subSubCategories.map((subSubCategory, i) => (
                     <p className="py-1 px-2 my-1 border w-full" key={i * 3}>
                       {subSubCategory}

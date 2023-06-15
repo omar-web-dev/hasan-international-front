@@ -203,13 +203,36 @@ const Product = () => {
     // console.log(`Go to page ${page}`);
   };
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="bg-[#bdc3c7] pt-3 ">
       <div className=" bg-[#bdc3c7] ">
-        <h2 className=" my_h2 text-[#5f27cd] ">Service</h2>
+        <div className="lg:hidden ">
+          <button className="text-xl" onClick={toggleOpen}>{isOpen ? "Close" : "Category"}</button>
+          {isOpen && (
+            <div className="absolute">
+              <div className="w-full top-0 app px-2 relative h-[100vh] bg-white mr-1">
+                {categories.map((category, i) => (
+                  <Category
+                    key={i}
+                    name={category.mainCategory}
+                    subCategories={category.subCategories}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        <h2 className=" my_h2 text-[#5f27cd] ">Product</h2>
       </div>
       <div className="mt-3 max-w-[1200px] mx-auto flex">
-        <div className="category w-[300px]">
+        <div className="category hidden lg:block w-[300px]">
           <div className="app px-2 relative h-[75vh] bg-white mr-1">
             {categories.map((category, i) => (
               <Category
@@ -220,8 +243,8 @@ const Product = () => {
             ))}
           </div>
         </div>
-        <div className="product w-full ml-2 mb-10">
-          <div className="grid grid-cols-4 gap-3 justify-justify-between">
+        <div className="product w-full lg:ml-2 mb-6 px-3 md:px-5 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 justify-justify-between">
             {isLoading
               ? dataArray.map((_, index) => (
                   <div
@@ -252,7 +275,7 @@ const Product = () => {
           </div>
         </div>
       </div>
-      <div className="mx-auto flex justify-center">
+      <div className="mx-auto flex justify-center pb-4">
         {Array.from({ length: totalPages }, (_, index) => (
           <button
             key={index}

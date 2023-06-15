@@ -24,28 +24,53 @@ export const NewProduct = () => {
     { id: 6, img: product6 },
     { id: 7, img: product7 },
   ];
-
   const swiperRefDes = useRef(null);
 
   useEffect(() => {
-    new SwiperCore(".swiper", {
-      slidesPerView: 4,
+    const swiperInstance = new SwiperCore(".swiper", {
+      slidesPerView: getSlidesPerView(),
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
     });
+
+    const  getSlidesPerView = ( ) => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth >= 1024) {
+        return 4; // Large desktop - 4 slides per view
+      } else if (screenWidth >= 768) {
+        return 3; // Medium-sized devices - 3 slides per view
+      } else {
+        return 1; // Small devices - 1 slide per view
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    function handleResize() {
+      const slidesPerView = getSlidesPerView();
+      swiperInstance.params.slidesPerView = slidesPerView;
+      swiperInstance.update();
+    }
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
-    <div className="pt-4">
+    <div className="pt-4 px-3 md:px-5">
       <div className="text-center max-w-[600px] mx-auto">
         <h2 className="my_h2">New Products</h2>
       </div>
       <div className="mt-4">
-        <Swiper className="h-full px-3" ref={swiperRefDes}>
+        <Swiper
+          className="h-full sm:h-auto md:h-full lg:h-auto xl:h-full"
+          ref={swiperRefDes}
+        >
           <div className="swiper-wrapper">
-            {/* show last added 10 product */}
+            {/* show last added 10 products */}
             {products.map((product) => (
               <SwiperSlide key={product.id}>
                 <NewProductCard product={product} />
