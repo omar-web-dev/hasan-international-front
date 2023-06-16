@@ -75,19 +75,19 @@ const SingleProduct = () => {
   return (
     <div className="bg-[#BDC3C7]">
       
-      <div className="max-w-[1200px] mt-32 mx-auto flex items-start pb-10 pt-20">
+      <div className="max-w-[1200px] px-3 md:px-5 lg:px-0 mx-auto md:flex items-start pb-10 pt-10">
         {/* 1st section  for image */}
-        <div className="w-2/5 pr-2 relative">
-          <div className="sticky top-0 bottom-0 w-[450px] h-[350px] pr-2">
-            <img className="rounded-lg h-full" src={sp?.img} alt="" />
+        <div className="lg:w-2/5 lg:pr-2 relative">
+          <div className="sticky top-0 bottom-0 lg:w-[450px] md:w-[350px] lg:h-[350px] md:pr-2">
+            <img className="rounded-lg h-full w-full" src={sp?.img} alt="" />
           </div>
         </div>
 
         {/* 2nd section for product details */}
-        <div className="w-2/5 pr-6 justify-center">
+        <div className={`${sp?.eSell ? "lg:w-2/5" : "lg:w-4/5"} my-3 md:py-0 lg:pr-6 justify-center`}>
           <div className=" text-lg text-black">{sp?.title}</div>
           <hr className="w-full h-[2px] my-2 bg-gray-300" />
-          <div className="flex">
+          <div className="md:flex">
             <div className="flex items-center">
               {Array.from({ length: maxRating }, (_, index) => (
                 <span key={index}>
@@ -99,12 +99,12 @@ const SingleProduct = () => {
                 </span>
               ))}
             </div>
-            <div className="w-[150px]">1 Ratings</div>
+            <div className="w-full md:w-[150px]">1 Ratings</div>
             {/* <div className="w-[50px] border h-[100px]">678 answered questions</div> */}
           </div>
           {sp?.eSell ? (
             <>
-              <div className="flex ">
+              <div className="md:flex ">
                 <div className="text-red-500 text-xl mr-2">
                   {" "}
                   {pricePercentage}
@@ -144,7 +144,7 @@ const SingleProduct = () => {
         </div>
         {/* 3rd section for buy information  */}
         {sp?.eSell ? (
-          <div className="w-1/5 border rounded-lg p-5">
+          <div className="md:w-1/5 border rounded-lg p-5">
             <div className="flex items-start">
               <p className="">$</p>
               <p className="text-2xl pt-0">{sp?.sellPrice}</p>
@@ -200,9 +200,9 @@ const SingleProduct = () => {
                 <div className="">
                   <div className="max-w-[1200px] px-3 mx-auto flex flex-col items-center justify-center"></div>
                   {isPopupOpen && (
-                    <div className="fixed inset-0 h-screen w-full props-bg flex items-center justify-center z-50">
+                    <div className="fixed inset-0 h-screen px-3 w-full props-bg flex items-center justify-center z-50">
                       <div className="inset-0 flex items-center justify-center  opacity-100 z-50">
-                        <div className=" bg-white rounded-lg p-8 shadow-lg w-[600px]">
+                        <div className=" bg-white rounded-lg p-8 shadow-lg md:w-[600px]">
                           <div className="flex justify-end">
                             <button
                               className="p-2 bg-red-100 text-red-300 rounded-full hover:bg-red-200 hover:text-red-600"
@@ -212,7 +212,7 @@ const SingleProduct = () => {
                             </button>
                           </div>
                           {/* Popup content goes here */}
-                          <div className="mx-auto flex flex-col max-w-[1000px]">
+                          <div className="mx-auto flex flex-col w-3xl lg:max-w-[1000px]">
                             <ul className="flex flex-col divide-y divide-gray-700">
                               <li className="flex flex-col py-6 sm:flex-row sm:justify-between">
                                 <div className="flex w-full space-x-2 sm:space-x-4">

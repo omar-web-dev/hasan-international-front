@@ -9,6 +9,8 @@ import prodcut6 from "../../assets/app-6.jpeg";
 import prodcut7 from "../../assets/app-7.jpeg";
 import prodcut9 from "../../assets/app-9.png";
 import { Link } from "react-router-dom";
+import { FiMenu } from "react-icons/fi";
+import { FiXCircle } from "react-icons/fi";
 
 const Product = () => {
   // category items
@@ -212,11 +214,13 @@ const Product = () => {
   return (
     <div className="bg-[#bdc3c7] pt-3 ">
       <div className=" bg-[#bdc3c7] ">
-        <div className="lg:hidden ">
-          <button className="text-xl" onClick={toggleOpen}>{isOpen ? "Close" : "Category"}</button>
+
+      <h2 className=" my_h2 text-[#5f27cd] ">Product</h2>
+        <div className="lg:hidden px-3 md:px-5 -mt-10 ">
+          <button className="text-xl" onClick={toggleOpen}>{isOpen ? <FiXCircle className="text-red-500"/> : <FiMenu/>}</button>
           {isOpen && (
             <div className="absolute">
-              <div className="w-full top-0 app px-2 relative h-[56vh] md:h-[350px] lg:h-[75vh] bg-white mr-1">
+              <div className=" top-0 app px-2 w-full left-0 relative h-[56vh] md:h-[350px] lg:h-[75vh] bg-white mr-1" style={{ width: "calc(100% - 12px)" }}>
                 {categories.map((category, i) => (
                   <Category
                     key={i}
@@ -229,7 +233,7 @@ const Product = () => {
           )}
         </div>
 
-        <h2 className=" my_h2 text-[#5f27cd] ">Product</h2>
+        
       </div>
       <div className="mt-3 max-w-[1200px] mx-auto flex">
         <div className="category hidden lg:block w-[300px]">

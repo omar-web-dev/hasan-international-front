@@ -47,7 +47,10 @@ export const NewProduct = () => {
         return 4; // Large desktop - 4 slides per view
       } else if (screenWidth >= 768) {
         return 3; // Medium-sized devices - 3 slides per view
-      } else {
+      }else if (screenWidth >= 500) {
+        return 2; // Medium-sized devices - 3 slides per view
+      }
+       else {
         return 1; // Small devices - 1 slide per view
       }
     }
@@ -66,7 +69,7 @@ export const NewProduct = () => {
   }, []);
 
   return (
-    <div className="pt-4 px-3 md:px-5">
+    <div className="pt-4 px-3 md:px-5 lg:px-0">
       <div className="text-center max-w-[600px] mx-auto">
         <h2 className="my_h2">New Products</h2>
       </div>

@@ -36,7 +36,7 @@ const MobileMenu = ({ menu }) => {
             transition={{ duration: 0.4, delay: 0.2 }}
             className="bg-[#F8EFBA] z-0 w-full custom-scroll top-0 right-0 max-h-screen absolute p-2 overflow-y-auto"
           >
-            <div className="">
+            <div className=" md:px-5 px-1">
               
 
               <div className="min-h-[25vh] md:min-h-[15vh]">

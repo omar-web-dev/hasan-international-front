@@ -5,7 +5,7 @@ const ContactForm = () => {
 
   return (
     <div
-      className="w-full pb-20 bg-cover bg-center pt-3 bg-[#bdc3c7]"
+      className="w-full px-3 md:px-0 md:w-full pb-20 bg-cover bg-center pt-3 bg-[#bdc3c7]"
     >
       <h2 className=" my_h2 text-[#5f27cd]  mb-10">Contact </h2>
       <form

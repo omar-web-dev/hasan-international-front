@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const MyCarts = () => {
   return (
-    <div className="pt-44 bg-[#BDC3C7]">
-      <div className="mx-auto flex flex-col max-w-[1000px] p-6 space-y-4 sm:p-10 dark:bg-gray-900 dark:text-gray-100">
+    <div className="pt-4 bg-[#BDC3C7]">
+      <div className="mx-auto flex flex-col max-w-[1000px] px-3 md:px-5 lg:px-0 dark:bg-gray-900 dark:text-gray-100">
         <ul className="flex flex-col divide-y divide-gray-700">
           <li className="flex flex-col py-6 sm:flex-row sm:justify-between">
             <div className="flex w-full space-x-2 sm:space-x-4">
@@ -186,7 +186,7 @@ const MyCarts = () => {
             Not including taxes and shipping costs
           </p>
         </div>
-        <div className="flex justify-end space-x-4">
+        <div className="flex justify-end space-x-4 pb-4">
           <Link to='/product'
             className="px-6 py-2 bg-[#576574] text-white rounded-md dark:border-violet-400"
           >
