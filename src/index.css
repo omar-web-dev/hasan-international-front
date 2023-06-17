@@ -22,20 +22,6 @@ body {
 .custom-shadow {
   box-shadow: 0px 24px 48px 8px #011529;
 }
-.custom-bottom-border {
-  border-top: transparent !important;
-  border-left: transparent !important;
-  border-right: transparent !important;
-  border: 0.01px solid rgba(245, 237, 237, 0.19);
-}
-
-.custom-path {
-  -webkit-clip-path: polygon(100% 66%, 100% 86%, 0 47%, 0 27%);
-  clip-path: polygon(100% 66%, 100% 86%, 0 47%, 0 27%);
-}
-.home2-background {
-  background: linear-gradient(38.35deg, #3657cd 34.77%, #5d78d6 84.87%);
-}
 
 .primary-navbar {
   position: absolute !important;
@@ -64,37 +50,6 @@ body {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-.animation {
-  transition: 0.3s linear;
-}
-
-.custom-shadow-left {
-  box-shadow: -2px 0px 2px -1px rgba(0, 0, 0, 0.5) inset;
-}
-.cuystom-gradient {
-  background: linear-gradient(
-    151.76deg rgba(249, 199, 71, 0) -8.92%,
-    #f9c747 115.63%
-  );
-}
-
-.custom-scroll::-webkit-scrollbar {
-  width: 0.2px;
-}
-
-.custom-scroll::-webkit-scrollbar-thumb {
-  background-color: blue;
-}
-
-.slick-active > button::before {
-  color: #3657cd !important;
-  font-size: 14px;
-}
-
-.slick-dots > li > button::before {
-  color: #e6e6e9ea;
-  font-size: 14px;
-}
 
 .sm_d_h1 {
   font-size: 62px;
@@ -158,7 +113,7 @@ body {
 .text_star {
   text-align: left;
 }
-
+ /* ======== slider ============ */
 .swiper-button-next,
 .swiper-button-prev {
   color: white;

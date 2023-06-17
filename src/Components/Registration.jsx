@@ -16,7 +16,7 @@ const Registration = () => {
 
   return (
     <div className="mx-auto shadow-md bg-gray-300 rounded-md px-3 md:px-5 lg:px-0">
-      <div className="mx-auto h-screen flex justify-center items-center max-w-[800px] ">
+      <div className="mx-auto py-8 flex justify-center items-center max-w-[800px] ">
         <div className=" bg-white w-full rounded-lg p-10 mx-auto">
           <h2 className="text-2xl font-bold mb-4">Sing Up</h2>
           <form onSubmit={handleSubmit}>
@@ -98,7 +98,7 @@ const Registration = () => {
           </form>
           <div className="flex justify-between mt-4">
             <p className="text-sm text-center dark:text-gray-400">
-              have an account yet?
+              Have an account?
             </p>
             <Link to="/sing-in" className="hover:underline text-blue-500 hover:text-violet-400">
               Sign in

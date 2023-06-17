@@ -12,8 +12,8 @@ const SingIn = () => {
 
   return (
     <div className=" px-3 md:px-5 lg:px-0 bg-gray-300 rounded-md">
-      <div className="mx-auto h-screen flex justify-center items-center shadow-md max-w-[800px] ">
-        <div className="w-full bg-white shadow-md rounded-lg p-10 mx-auto">
+      <div className="mx-auto py-8 flex justify-center items-center max-w-[800px] ">
+        <div className="w-full bg-white shadow-md rounded-lg p-10  mx-auto">
           <h2 className="text-2xl font-bold mb-4">Sign In</h2>
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
