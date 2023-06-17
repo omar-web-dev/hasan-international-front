@@ -27,7 +27,7 @@ const About = () => {
     { id: 7, img: app7, title: "This is a title-7" },
     { id: 9, img: app9, title: "This is a title-9" },
   ];
-
+// just commit 
   return (
     <div className="bg-[#bdc3c7] ">
       <div className="pt-3 ">
