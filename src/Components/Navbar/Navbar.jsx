@@ -1,7 +1,7 @@
-import DesktopMenu from "./DesktopMenu";
+import DesktopMenue from "./DesktopMenue";
 import MobileMenu from "./MobileMenu";
 import SocialIcons from "../SocialIcons/SocialIcons";
-import Logo from "../Logo/logo";
+import Logo from "../Logo/Logo";
 import { FaCartArrowDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -47,7 +47,7 @@ const Navbar = () => {
                         {/* ======================== Desktop Menu =============== */}
 
                         <div className="flex flex-nowrap -ml-1 ">
-                          <DesktopMenu menu={menu} />
+                          <DesktopMenue menu={menu} />
                         </div>
                       </div>
                     </div>

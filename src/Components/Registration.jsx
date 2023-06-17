@@ -81,7 +81,7 @@ const Registration = () => {
               <div className="mb-4 w-full">
                 <label className="block mb-2 font-medium">Zip Code</label>
                 <input
-                  type="text"
+                  type="number"
                   value={zipCode}
                   onChange={(e) => setZipCode(e.target.value)}
                   className="w-full p-2 border border-gray-300 rounded-md"
