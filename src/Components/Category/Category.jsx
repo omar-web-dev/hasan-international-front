@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Category = ({ name, subCategories, subSubCategories }) => {
+export const Category = ({ name, subCategories, subSubCategories }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -13,7 +13,7 @@ const Category = ({ name, subCategories, subSubCategories }) => {
 
   return (
     <div
-      className="category"
+      className="category-section"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -36,9 +36,9 @@ const Category = ({ name, subCategories, subSubCategories }) => {
           {isHovered && (
             <div className="h-[56vh] md:h-[350px] lg:h-[75vh] sub-categories absolute top-0 left-1/4 w-3/4 md:left-[230px] md:w-[230px] bg-white">
               {subCategories &&
-                subCategories?.map((subCategory, i) => (
+                subCategories?.map((subCategory, index) => (
                   <Category
-                    key={i * 2}
+                    key={index}
                     name={subCategory.name}
                     subSubCategories={subCategory.subSubCategories}
                   />
@@ -46,7 +46,7 @@ const Category = ({ name, subCategories, subSubCategories }) => {
               {subSubCategories && isHovered && (
                 <div className="lg:h-[75vh] h-[56px] md:h-[350px]  w-full absolute top-0 lg:px-4 md:w-[300px] bg-white">
                   {subSubCategories.map((subSubCategory, i) => (
-                    <p className="py-1 px-2 my-1 border w-full" key={i * 3}>
+                    <p className="py-1 px-2 my-1 border w-full" key={i}>
                       {subSubCategory}
                     </p>
                   ))}
@@ -61,5 +61,5 @@ const Category = ({ name, subCategories, subSubCategories }) => {
   );
 };
 
-
 export default Category;
+

@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import "./about.css";
-import app1 from "../../assets/app-1.jpeg";
-import app2 from "../../assets/app-2.jpeg";
-import app3 from "../../assets/app-3.jpeg";
-import app4 from "../../assets/app-4.jpeg";
-import app5 from "../../assets/app-5.jpeg";
-import app6 from "../../assets/app-6.jpeg";
-import app7 from "../../assets/app-7.jpeg";
-import app9 from "../../assets/app-9.png";
+import app1 from "../../assets/application/app-1.jpeg";
+import app2 from "../../assets/application/app-2.jpeg";
+import app3 from "../../assets/application/app-3.jpeg";
+import app4 from "../../assets/application/app-4.jpeg";
+import app5 from "../../assets/application/app-5.jpeg";
+import app6 from "../../assets/application/app-6.jpeg";
+import app7 from "../../assets/application/app-7.jpeg";
+import app9 from "../../assets/application/app-9.png";
 import Brand from "../Brands/Brands";
 
 const About = () => {
@@ -30,7 +30,6 @@ const About = () => {
   return (
     <div className="bg-[#bdc3c7] ">
       {/* ==================== this is a  about us page =================== */}
-      <h1>about us  page</h1>
       <div className="pt-3 ">
         <div className=" bg-[#bdc3c7] ">
           <h2 className=" my_h2 text-[#5f27cd] ">About us</h2>

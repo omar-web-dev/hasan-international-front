@@ -1,5 +1,5 @@
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
-import product1 from "../../assets/app-1.jpeg";
+import product1 from "../../assets/application/app-1.jpeg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaRegTimesCircle } from "react-icons/fa";
