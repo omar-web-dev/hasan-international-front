@@ -186,12 +186,12 @@ const MyCarts = () => {
             Not including taxes and shipping costs
           </p>
         </div>
-        <div className="flex justify-end space-x-4 pb-4">
+        <div className="flex justify-end space-x-4 pb-4 mt-2">
           <Link to='/product'
             className="px-6 py-2 bg-[#576574] text-white rounded-md dark:border-violet-400"
           >
             Back
-            <span className="sr-only sm:not-sr-only">to shop</span>
+            <span className="sr-only sm:not-sr-only">{" "}to shop</span>
           </Link>
         </div>
       </div>

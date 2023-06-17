@@ -3,6 +3,7 @@ import MobileMenu from "./MobileMenu";
 import SocialIcons from "../SocialIcons/SocialIcons";
 import Logo from "../Logo/logo";
 import { FaCartArrowDown } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const menu = [
@@ -65,12 +66,12 @@ const Navbar = () => {
                     <SocialIcons />
                   </div>
                   <div className="hidden lg:flex justify-end">
-                    <div className="relative h-8 w-10 mt-5">
+                    <Link to={"my-carts"} className="relative h-8 w-10 mt-5">
                       <FaCartArrowDown className=" h-8 w-8 text-white" />
                       <span className="absolute -top-3 right-0 w-5 h-5 text-[12px] justify-center items-center flex text-white rounded-full bg-[#EA2027]">
                         10
                       </span>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </div>

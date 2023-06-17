@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const DesktopMenu = ({ menu }) => {
   return (
-    <div className="lg:block hidden">
+    <div className="lg:block hidden ml-2">
       {/************************ desktop menu start here *************************/}
 
       <ul className="flex mt-2 items-center">
