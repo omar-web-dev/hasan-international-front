@@ -119,9 +119,9 @@ const Service = () => {
             </div>
           </div>
           <div className="lg:w-1/2">
-            <div className="grid gap-5 mt-3 lg:mt-3 lg:ml-32">
+            <div className="grid gap-5 mt-3 lg:h-[130.5vh]  lg:mt-3 lg:ml-32">
               {appData.map((item) => (
-                <div key={item.id} className="bg-white px-4 rounded shadow">
+                <div key={item.id} className="bg-white px-4 flex justify-center items-center rounded shadow">
                   <img
                     src={item.img}
                     alt={item.title}

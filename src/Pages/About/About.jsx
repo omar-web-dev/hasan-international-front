@@ -84,9 +84,9 @@ const About = () => {
           </div>
           <div className="lg:w-2/5">
             {/* <Application/> */}
-            <div className="grid md:grid-cols-2 gap-5 lg:ml-5 px-3 md:px-5 mt-4 lg:mt-0">
+            <div className="grid md:grid-cols-2 gap-5 lg:ml-5 lg:h-[122.4vh] px-3 md:px-5 mt-4 lg:mt-0">
               {appData.map((item) => (
-                <div key={item.id} className="bg-white p-4 rounded shadow">
+                <div key={item.id} className="bg-white p-4 flex justify-center items-center flex-col rounded shadow">
                   <img
                     src={item.img}
                     alt={item.title}
