@@ -30,7 +30,6 @@ const About = () => {
   return (
     <div className="bg-[#bdc3c7] ">
       {/* ==================== this is a  about us page =================== */}
-      <h1>about us  page</h1>
       <div className="pt-3 ">
         <div className=" bg-[#bdc3c7] ">
           <h2 className=" my_h2 text-[#5f27cd] ">About us</h2>
