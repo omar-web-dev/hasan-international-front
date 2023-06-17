@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/main/Main";
 import Home from "../Pages/Home/Home";
 import Service from "../Pages/Service/Service";
-import SingIn from "../Components/SingIn/SingIn";
+import SingIn from "../Components/SignIn/SignIn";
 import P404 from "../Pages/P404";
 import Contact from "../Pages/Contact/Contact";
 import SingleProduct from "../Pages/SingleProduct/SingleProduct";

@@ -2,7 +2,7 @@ import { Button } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const WithButton = ({ submitValue, color, bg }) => {
+const SubButton = ({ submitValue, color, bg }) => {
   return (
     <Link to="./sing-in">
       <Button
@@ -14,10 +14,10 @@ const WithButton = ({ submitValue, color, bg }) => {
   );
 };
 
-WithButton.propTypes = {
+SubButton.propTypes = {
   submitValue: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
   bg: PropTypes.string.isRequired,
 };
 
-export default WithButton;
+export default SubButton;

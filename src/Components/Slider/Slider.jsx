@@ -7,7 +7,7 @@ import "./Slider.css";
 // import required modules
 import { Navigation } from "swiper";
 
-export default function App() {
+const  Slider = () => {
   return (
     <>
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
@@ -55,3 +55,5 @@ export default function App() {
     </>
   );
 }
+
+export default Slider
