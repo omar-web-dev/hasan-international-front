@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import app1 from "../../assets/services/service-1.jpg";
+import app1 from "../../assets/services/service-1.jpeg";
 import app2 from "../../assets/services/service-2.jpg";
 import app3 from "../../assets/services/service-3.png";
 
@@ -22,14 +22,71 @@ const Service = () => {
       </div>
       <div className="max-w-[1200px] mx-auto">
         <div className="lg:flex px-3 md:px-5">
-          <div className="lg:w-1/2 lg:h-[122.4vh]  lg:mr-14">
-            <p className="text-[18px] text-justify lg:pr-2">
+          <div className="lg:w-1/2  lg:overflow-y-scroll lg:h-[130.5vh]  lg:mr-14">
+            <div className="text-[18px] text-justify lg:pr-2">
               <span className="font-semibold"> 1. Services</span> <br />
               Hasan International Provide Integrated Service Solution.
               <br />
               <br />
               <span className="font-semibold">
-                2. Heamodialysis Unit Setup
+                2. Medical Equipment Supply and Setup
+              </span>{" "}
+              <br />
+              <p>
+                Hasan International specializes in providing comprehensive
+                solutions for medical equipment supply and setup. We offer a
+                wide range of high-quality medical equipment, including
+                diagnostic instruments, surgical tools, patient monitoring
+                systems, imaging devices, and more. Our team of experts ensures
+                seamless installation and configuration of the equipment, along
+                with training and ongoing support for healthcare professionals.
+              </p>
+              <br />
+              <span className="font-semibold">
+                3. Healthcare Facility Design and Construction
+              </span>{" "}
+              <br />
+              <p>
+                At Hasan International, we understand the importance of
+                well-designed healthcare facilities. We offer consultancy and
+                construction services for designing and building hospitals,
+                clinics, and medical centers. Our team of architects, engineers,
+                and healthcare professionals collaborate to create functional,
+                efficient, and patient-friendly spaces that meet international
+                standards and regulations.
+              </p>
+              <br />
+              <span className="font-semibold">
+                4. Training and Capacity Building
+              </span>{" "}
+              <br />
+              <p>
+                We believe in empowering individuals and organizations through
+                training and capacity building initiatives. Hasan International
+                provides customized training programs in various areas, such as
+                healthcare management, medical equipment operation and
+                maintenance, infection control practices, and more. Our training
+                modules are designed to enhance knowledge, skills, and overall
+                performance, contributing to the development of a competent
+                workforce.
+              </p>
+              <br />
+              <span className="font-semibold">
+                5. Quality Assurance and Compliance
+              </span>{" "}
+              <br />
+              <p>
+                Ensuring quality and compliance is crucial in the healthcare
+                industry. Hasan International offers consultancy services to
+                assist healthcare facilities in implementing robust quality
+                assurance systems and complying with regulatory standards. Our
+                experts conduct audits, provide guidance on process improvement,
+                develop documentation frameworks, and assist in achieving
+                accreditation and certification.
+              </p>
+              <br />
+              <span className="font-semibold">
+                6. Heamodialysis Unit Setup
               </span>{" "}
               <br />
               We provided world class heamodialysis unit concept with design and
@@ -39,14 +96,14 @@ const Service = () => {
               <br />
               <br />
               <span className="font-semibold">
-                3. Installation and Comission
+                7. Installation and Comission
               </span>{" "}
               <br />
               Hasan International provide quality and quick design, installation
               and commissioning service.
               <br />
               <br />
-              <span className="font-semibold">4. Consultancy</span> <br />
+              <span className="font-semibold">8. Consultancy</span> <br />
               We help make a better country in a best way. Hasan International
               is one of the consulting organizations and providing appropriate
               and sustainable solutions in health care, industrial factory
@@ -57,7 +114,9 @@ const Service = () => {
               Waste water treatment plant, Industrial water treatment plant,
               Feed mill project, Auto bricks project, Packaging machinery, Solar
               system, Water desalination plant, Hospital equipment setup etc.
-            </p>
+              <br />
+              <br />
+            </div>
           </div>
           <div className="lg:w-1/2">
             <div className="grid gap-5 mt-3 lg:mt-3 lg:ml-32">
@@ -66,7 +125,7 @@ const Service = () => {
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-full h-auto mb-2"
+                    className="w-full h-auto mb-2 p-4"
                   />
                   <h3 className="text-center text-lg font-bold">
                     {item.title}
