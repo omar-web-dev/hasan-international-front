@@ -4,7 +4,6 @@ import Home from "../Pages/Home/Home";
 import Service from "../Pages/Service/Service";
 import SingIn from "../Components/SingIn/SingIn";
 import P404 from "../Pages/P404";
-import Blog from "../Pages/Blog/Blog";
 import Contact from "../Pages/Contact/Contact";
 import SingleProduct from "../Pages/SingleProduct/SingleProduct";
 import About from "../Pages/About/About";
@@ -28,10 +27,6 @@ const routes = createBrowserRouter([
       {
         path: "/about-us",
         element: <About/>,
-      },
-      {
-        path: "/blog",
-        element: <Blog/>,
       },
       {
         path: "/contact",

@@ -3,15 +3,15 @@ import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
 import "swiper/css/bundle";
-import app1 from '../../assets/app-1.jpeg';
-import app2 from '../../assets/app-2.jpeg';
-import app3 from '../../assets/app-3.jpeg';
-import app4 from '../../assets/app-4.jpeg';
-import app5 from '../../assets/app-5.jpeg';
-import app6 from '../../assets/app-6.jpeg';
-import app7 from '../../assets/app-7.jpeg';
-import app8 from '../../assets/app-8.jpeg';
-import app9 from '../../assets/app-9.png';
+import app1 from '../../assets/application/app-1.jpeg';
+import app2 from '../../assets/application/app-2.jpeg';
+import app3 from '../../assets/application/app-3.jpeg';
+import app4 from '../../assets/application/app-4.jpeg';
+import app5 from '../../assets/application/app-5.jpeg';
+import app6 from '../../assets/application/app-6.jpeg';
+import app7 from '../../assets/application/app-7.jpeg';
+import app8 from '../../assets/application/app-8.jpeg';
+import app9 from '../../assets/application/app-9.png';
 
 
 SwiperCore.use([Navigation]);
