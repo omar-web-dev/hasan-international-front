@@ -27,9 +27,10 @@ const About = () => {
     { id: 7, img: app7, title: "This is a title-7" },
     { id: 9, img: app9, title: "This is a title-9" },
   ];
-// just commit 
   return (
     <div className="bg-[#bdc3c7] ">
+      {/* ==================== this is a  about us page =================== */}
+      <h1>about us  page</h1>
       <div className="pt-3 ">
         <div className=" bg-[#bdc3c7] ">
           <h2 className=" my_h2 text-[#5f27cd] ">About us</h2>
@@ -86,7 +87,10 @@ const About = () => {
             {/* <Application/> */}
             <div className="grid md:grid-cols-2 gap-5 lg:ml-5 lg:h-[122.4vh] px-3 md:px-5 mt-4 lg:mt-0">
               {appData.map((item) => (
-                <div key={item.id} className="bg-white p-4 flex justify-center items-center flex-col rounded shadow">
+                <div
+                  key={item.id}
+                  className="bg-white p-4 flex justify-center items-center flex-col rounded shadow"
+                >
                   <img
                     src={item.img}
                     alt={item.title}
