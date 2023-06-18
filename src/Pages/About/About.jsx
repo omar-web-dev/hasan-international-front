@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import "./about.css";
 import app1 from "../../assets/application/app-1.jpeg";
 import app2 from "../../assets/application/app-2.jpeg";
 import app3 from "../../assets/application/app-3.jpeg";
@@ -13,6 +12,7 @@ import Brand from "../Brands/Brands";
 const About = () => {
   useEffect(() => {
     return () => {
+      // ------------------ Browser's tab name -----------------------
       document.title = "Hasan International / about";
     };
   }, []);
