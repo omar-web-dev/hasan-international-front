@@ -3,11 +3,11 @@ import Main from "../Layout/main/Main";
 import Home from "../Pages/Home/Home";
 import Service from "../Pages/Service/Service";
 import SingIn from "../Components/SignIn/SignIn";
+import ContactForm from "../Components/ContactForm";
 import P404 from "../Pages/P404";
-import Contact from "../Pages/Contact/Contact";
 import SingleProduct from "../Pages/SingleProduct/SingleProduct";
 import About from "../Pages/About/About";
-import Product from "../Pages/Product/product";
+import Product from "../Pages/Product/Product";
 import Registration from "../Components/Registration";
 import MyCarts from "../Pages/About/MyCarts";
 
@@ -30,7 +30,7 @@ const routes = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contact/>,
+        element: <ContactForm/>,
       },
       {
         path: "/service",
