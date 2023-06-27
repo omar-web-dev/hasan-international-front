@@ -7,7 +7,26 @@ const SingIn = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
+    const formData = new FormData();
+    const url = "";
+    fetch(url, {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Request failed with status: " + response.status);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        // Handle the response data
+        console.log(data);
+      })
+      .catch((error) => {
+        // Handle any errors
+        console.error(error);
+      });
   };
 
   return (
@@ -53,7 +72,10 @@ const SingIn = () => {
             <p className="text-sm text-center dark:text-gray-400">
               {"Don't"} have an account yet?
             </p>
-            <Link to="/sing-up" className="hover:underline text-blue-500 hover:text-violet-400">
+            <Link
+              to="/sing-up"
+              className="hover:underline text-blue-500 hover:text-violet-400"
+            >
               Sign up
             </Link>
           </div>

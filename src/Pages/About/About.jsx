@@ -35,7 +35,7 @@ const About = () => {
           <h2 className=" my_h2 text-[#5f27cd] ">About us</h2>
         </div>
       </div>
-      <div className="max-w-[1200px] mx-auto mt-3 lg:pb-10">
+    <div className="max-w-[1200px] mx-auto mt-3 lg:pb-10">
         <div className="lg:flex">
           <div className="lg:w-3/5 lg:h-[122.4vh] lg:overflow-y-scroll lg:mr-14 md:px-5 px-3">
             <p className="text-[18px] text-justify lg:pr-2">

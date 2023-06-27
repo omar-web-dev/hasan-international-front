@@ -1,14 +1,41 @@
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import product1 from "../../assets/application/app-1.jpeg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaRegTimesCircle } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { add_to_carts } from "../../reducer/ActionType/ActionType";
+import { addToCart } from "../../reducer/ActionType/ProductAction";
 
 const SingleProduct = () => {
+
+
+  const dispatch = useDispatch();
+
+  const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const response = await fetch('http://localhost:5173/single-product/1');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        console.log(data)
+        setProduct(data);
+      } catch (error) {
+        console.error('Error fetching product:', error);
+      }
+    };
+
+    fetchProduct();
+  }, []);
+
   const [quantity, setQuantity] = useState(1);
   // sp ======  Single Product
   const sp = {
-    id: 1,
+    _id: 1,
     img: product1,
     title: "SAMSUNG Galaxy Tab A7 Lite 8.7 32GB WiFi Android Tablet,",
     rating: 5,
@@ -28,6 +55,7 @@ const SingleProduct = () => {
     eSell: true,
     quantity: 10,
   };
+
   const maxRating = 5;
   const rating = sp.rating;
 
@@ -48,7 +76,7 @@ const SingleProduct = () => {
   };
 
   // my cards
-  const carts = [{ id: 1 }, { id: 2 }];
+  const carts = [{ _id: 1 }, { _id: 2 }];
 
   const [cart, setCart] = useState(carts);
 
@@ -56,9 +84,9 @@ const SingleProduct = () => {
     const selectedProduct = sp.find((product) => product.id === productId);
     if (selectedProduct) {
       setCart([...cart, selectedProduct]);
-      alert(`Product added to cart. ID: ${productId}`);
+      alert(`Product added to cart. _ID: ${productId}`);
     } else {
-      alert(`Product not found. ID: ${productId}`);
+      alert(`Product not found. _ID: ${productId}`);
     }
   };
 
@@ -74,7 +102,6 @@ const SingleProduct = () => {
 
   return (
     <div className="bg-[#BDC3C7]">
-      
       <div className="max-w-[1200px] px-3 md:px-5 lg:px-0 mx-auto md:flex items-start pb-10 pt-10">
         {/* 1st section  for image */}
         <div className="lg:w-2/5 lg:pr-2 relative">
@@ -84,7 +111,11 @@ const SingleProduct = () => {
         </div>
 
         {/* 2nd section for product details */}
-        <div className={`${sp?.eSell ? "lg:w-2/5" : "lg:w-4/5"} my-3 md:py-0 lg:pr-6 justify-center`}>
+        <div
+          className={`${
+            sp?.eSell ? "lg:w-2/5" : "lg:w-4/5"
+          } my-3 md:py-0 lg:pr-6 justify-center`}
+        >
           <div className=" text-lg text-black">{sp?.title}</div>
           <hr className="w-full h-[2px] my-2 bg-gray-300" />
           <div className="md:flex">
@@ -185,9 +216,10 @@ const SingleProduct = () => {
 
             <div className="mt-3">
               <div>
-                <div onClick={openPopup}>
+              {/* onClick={openPopup} */}
+                <div className="onClick={openPopup}">
                   <button
-                    onClick={() => handleAddToCart(sp.id)}
+                    onClick={() => dispatch(addToCart(sp))}
                     className={`w-full cursor-pointer py-1 text-center rounded-full ${
                       !sp?.quantity
                         ? "bg-gray-500 text-white opacity-50 cursor-not-allowed"
@@ -254,10 +286,12 @@ const SingleProduct = () => {
                               </p>
                             </div>
                             <div className="flex justify-end space-x-4">
-                              <Link to='../../../my-carts'
+                              <Link
+                                to="../../../my-carts"
                                 type="button"
                                 className="px-6 py-2 border rounded-md dark:bg-violet-400 dark:text-gray-900 dark:border-violet-400"
-                              >Go to cart 
+                              >
+                                Go to cart
                               </Link>
                             </div>
                           </div>
@@ -286,7 +320,6 @@ const SingleProduct = () => {
       </div>
 
       {/* this is a my cards */}
-      
     </div>
   );
 };
