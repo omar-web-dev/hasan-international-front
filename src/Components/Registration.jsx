@@ -10,8 +10,6 @@ const Registration = () => {
   const [error, setError] = useState();
   const [success, setSuccess] = useState();
 
-  
-
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -33,7 +31,7 @@ const Registration = () => {
     } catch (error) {
       setError(error?.response?.data?.message);
       // console.error(error);
-      toast.success(error?.response?.data?.message);
+      toast.error(error?.response?.data?.message);
     }
   };
 

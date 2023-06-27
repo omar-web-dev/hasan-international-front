@@ -1,32 +1,40 @@
+import axios from "axios";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const SingIn = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState();
+  const [success, setSuccess] = useState();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const formData = new FormData();
-    const url = "";
-    fetch(url, {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Request failed with status: " + response.status);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        // Handle the response data
-        console.log(data);
-      })
-      .catch((error) => {
-        // Handle any errors
-        console.error(error);
-      });
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+  console.log(error)
+  console.log(success)
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid },
+  } = useForm({ mode: "onChange" });
+
+  const handleSignIn = async (data) => {
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/v1/auth/login",
+        data
+      );
+      setSuccess(response?.data);
+      toast.success(response?.data?.message);
+    } catch (error) {
+      setError(error?.response?.data?.message);
+      // console.error(error);
+      toast.error(error?.response?.data?.message);
+    }
   };
 
   return (
@@ -34,18 +42,31 @@ const SingIn = () => {
       <div className="mx-auto py-8 flex justify-center items-center max-w-[800px] ">
         <div className="w-full bg-white shadow-md rounded-lg p-10  mx-auto">
           <h2 className="text-2xl font-bold mb-4">Sign In</h2>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit(handleSignIn)}>
             <div className="mb-4">
               <label className="block mb-2 font-medium">
                 Email <span className="text-[red]">*</span>
               </label>
               <input
-                type="text"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded-md"
+                {...register("email", {
+                  required: "Email is required",
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    message: "Invalid email address",
+                  },
+                })}
+                type="email"
+                className={` ${
+                  errors?.email ? " border-red-300" : "border-gray-300"
+                } outline-none w-full p-2 border border-gray-300 rounded-md`}
                 placeholder="jimi.uae@gmail.com"
               />
+              {errors.email && (
+                <span className="text-red-500 p-0 m-0">
+                  {" "}
+                  {errors.email.message}
+                </span>
+              )}
             </div>
 
             <div className="mb-4">
@@ -53,17 +74,50 @@ const SingIn = () => {
                 Password <span className="text-[red]">*</span>
               </label>
               <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded-md"
-                placeholder="*********"
+                type={showPassword ? "text" : "password"}
+                {...register("password", {
+                  required: "Password is required",
+                  minLength: {
+                    value: 6,
+                    message: "Password must be at least 6 characters",
+                  },
+                  maxLength: {
+                    value: 10,
+                    message: "Password must not exceed 10 characters",
+                  },
+                  pattern: {
+                    value:
+                      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/,
+                    message:
+                      "one uppercase, one lowercase, one number, and one special character",
+                  },
+                })}
+                className={` ${
+                  errors?.password ? " border-red-300" : "border-gray-300"
+                } outline-none w-full p-2 border border-gray-300 rounded-md`}
+                placeholder="********"
               />
             </div>
+            {errors.password && (
+              <p className="text-red-500 p-0 m-0"> {errors.password.message}</p>
+            )}
+
+            <button
+              className="py-1"
+              type="button"
+              onClick={togglePasswordVisibility}
+            >
+              {showPassword ? "Hide Password" : "Show Password"}
+            </button>
 
             <button
               type="submit"
-              className="w-full py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+              disabled={!isValid}
+              className={`w-full py-2 px-4 ${
+                isValid
+                  ? "bg-blue-500 hover:bg-blue-600"
+                  : "bg-gray-500 cursor-not-allowed"
+              } bg-blue-500 text-white rounded-md `}
             >
               Submit
             </button>
