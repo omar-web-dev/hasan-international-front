@@ -1,37 +1,36 @@
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import product1 from "../../assets/application/app-1.jpeg";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import { FaRegTimesCircle } from "react-icons/fa";
-import { useDispatch } from "react-redux";
-import { add_to_carts } from "../../reducer/ActionType/ActionType";
-import { addToCart } from "../../reducer/ActionType/ProductAction";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../Components/reducer/ActionType/ProductAction";
+import { useEffect } from "react";
+import axios from "axios";
 
 const SingleProduct = () => {
+  const state = useSelector((state) => state);
+  console.log(state, "dd");
 
-
-  const dispatch = useDispatch();
-
+  const { id } = useParams();
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch('http://localhost:5173/single-product/1');
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        console.log(data)
-        setProduct(data);
+        const response = await axios.get(
+          `https://dummyjson.com/products/${id}`
+        );
+        setProduct(response.data);
       } catch (error) {
-        console.error('Error fetching product:', error);
+        console.error("Error fetching product:", error);
       }
     };
 
     fetchProduct();
-  }, []);
+  }, [id]);
 
+  const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
   // sp ======  Single Product
   const sp = {
@@ -216,7 +215,7 @@ const SingleProduct = () => {
 
             <div className="mt-3">
               <div>
-              {/* onClick={openPopup} */}
+                {/* onClick={openPopup} */}
                 <div className="onClick={openPopup}">
                   <button
                     onClick={() => dispatch(addToCart(sp))}
@@ -303,7 +302,7 @@ const SingleProduct = () => {
               </div>
 
               <button
-                onClick={() => handleAddToCart(sp.id)}
+                // onClick={() => handleAddToCart(sp.id)}
                 className={`w-full cursor-pointer py-1 mt-2 text-center rounded-full ${
                   !sp?.quantity
                     ? "bg-gray-500 text-white opacity-50 cursor-not-allowed"

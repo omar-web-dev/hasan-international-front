@@ -1,19 +1,20 @@
-// import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useState } from "react";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 const Registration = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState();
-  const [success, setSuccess] = useState();
 
+
+  // password shaw and hide handler
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
+  // from handle using useFrom
   const {
     register,
     handleSubmit,
@@ -26,7 +27,6 @@ const Registration = () => {
         "http://localhost:5000/api/v1/auth/register",
         data
       );
-      setSuccess(response?.data);
       toast.success(response?.data?.message);
     } catch (error) {
       setError(error?.response?.data?.message);
@@ -117,9 +117,7 @@ const Registration = () => {
                   {errors.email.message}
                 </span>
               )}
-              {error && (
-                <span className="text-red-500 p-0 m-0"> {error}</span>
-              )}
+              {error && <span className="text-red-500 p-0 m-0"> {error}</span>}
             </div>
 
             <div className="mb-4">
@@ -240,5 +238,15 @@ const Registration = () => {
     </div>
   );
 };
+
+// Expand works in app.js file
+// import { ToastContainer } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+// <ToastContainer />
+
+// <Provider store={store}>
+//         <RouterProvider router={routes} />
+//         <ToastContainer />
+//       </Provider>
 
 export default Registration;

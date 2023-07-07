@@ -5,7 +5,7 @@ import { AiFillHdd } from "react-icons/ai";
 import { SiAdobeacrobatreader } from "react-icons/si";
 import { ImUpload2 } from "react-icons/im";
 import { Link, Outlet } from "react-router-dom";
-import DashboardItem from "../../Dashboard/DashboardItem";
+import DashboardItem from "./DashboardItem";
 
 const DashboardLayout = () => {
   const menus = [
@@ -41,7 +41,6 @@ const DashboardLayout = () => {
       icon: FaUsers,
     },
   ];
-  // const notification = [haveANoti, setHaveANoti]  = useState(0)
   const [openDrawer, setOpenDrawer] = useState(true);
   const [subItemShow, setSubItemShow] = useState("");
   const [toggle, setToggle] = useState({});

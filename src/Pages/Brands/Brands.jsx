@@ -13,18 +13,18 @@ import brand11 from "../../assets/brand/brand-11.jpg";
 
 const Brand = () => {
   const brands = [
-    { id: 2, img: brand2, title: "brand 2" },
-    { id: 3, img: brand3, title: "brand 3" },
-    { id: 4, img: brand4, title: "brand 4" },
-    { id: 5, img: brand5, title: "brand 5" },
-    { id: 6, img: brand6, title: "brand 6" },
-    { id: 1, img: brand1, title: "brand 1" },
-    { id: 1, img: brand1, title: "brand 1" },
-    { id: 7, img: brand7, title: "brand 7" },
-    { id: 8, img: brand8, title: "brand 8" },
-    { id: 9, img: brand9, title: "brand 9" },
-    { id: 10, img: brand10, title: "brand 10" },
-    { id: 11, img: brand11, title: "brand 11" },
+    { id: 1, img: brand2, title: "brand 2" },
+    { id: 2, img: brand3, title: "brand 3" },
+    { id: 3, img: brand4, title: "brand 4" },
+    { id: 4, img: brand5, title: "brand 5" },
+    { id: 5, img: brand6, title: "brand 6" },
+    { id: 6, img: brand1, title: "brand 1" },
+    { id: 7, img: brand1, title: "brand 1" },
+    { id: 8, img: brand7, title: "brand 7" },
+    { id: 9, img: brand8, title: "brand 8" },
+    { id: 10, img: brand9, title: "brand 9" },
+    { id: 11, img: brand10, title: "brand 10" },
+    { id: 12, img: brand11, title: "brand 11" },
   ];
 
   return (

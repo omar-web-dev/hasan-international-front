@@ -17,7 +17,7 @@ const Application = () => {
     {id : 5, img : app5,  title : 'This is a title-5'},
     {id : 6, img : app6,  title : 'This is a title-6'},
     {id : 7, img : app7,  title : 'This is a title-7'},
-    {id : 9, img : app9,  title : 'This is a title-9'},
+    {id : 8, img : app9,  title : 'This is a title-9'},
   ]
 
   return (

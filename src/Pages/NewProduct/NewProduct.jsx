@@ -24,6 +24,7 @@ export const NewProduct = () => {
     { id: 6, img: product6 },
     { id: 7, img: product7 },
   ];
+  
   const swiperRefDes = useRef(null);
 
   useEffect(() => {

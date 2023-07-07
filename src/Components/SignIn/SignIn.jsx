@@ -6,15 +6,10 @@ import { toast } from "react-toastify";
 
 const SingIn = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState();
-  const [success, setSuccess] = useState();
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
-
-  console.log(error)
-  console.log(success)
 
   const {
     register,
@@ -28,11 +23,10 @@ const SingIn = () => {
         "http://localhost:5000/api/v1/auth/login",
         data
       );
-      setSuccess(response?.data);
       toast.success(response?.data?.message);
+      const token = response?.data?.data?.token;
+      localStorage.setItem("token", token);
     } catch (error) {
-      setError(error?.response?.data?.message);
-      // console.error(error);
       toast.error(error?.response?.data?.message);
     }
   };
@@ -140,3 +134,7 @@ const SingIn = () => {
 };
 
 export default SingIn;
+
+
+
+

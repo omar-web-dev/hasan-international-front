@@ -10,6 +10,10 @@ import About from "../Pages/About/About";
 import Product from "../Pages/Product/product";
 import Registration from "../Components/Registration";
 import MyCarts from "../Pages/About/MyCarts";
+import ResetPassword from "../Components/ResetPassword";
+import DashboardLayout from "../Layout/Dashboard/Dashboard";
+import AllUsers from "../Components/deshbord/AllUsers";
+import DashboardHome from "../Layout/Dashboard/DashboardHome";
 
 const routes = createBrowserRouter([
   {
@@ -18,52 +22,70 @@ const routes = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home/>,
+        element: <Home />,
       },
       {
         path: "/home",
-        element: <Home/>,
+        element: <Home />,
       },
       {
         path: "/about-us",
-        element: <About/>,
+        element: <About />,
       },
+
       {
         path: "/contact",
-        element: <Contact/>,
+        element: <Contact />,
       },
       {
         path: "/service",
-        element: <Service/>,
+        element: <Service />,
       },
       {
         path: "/product",
-        element: <Product/>,
+        element: <Product />,
       },
       {
         path: "/sing-in",
-        element: <SingIn/>,
+        element: <SingIn />,
       },
       {
         path: "/sing-up",
-        element: <Registration/>,
+        element: <Registration />,
       },
       {
         path: "/single-product/:id",
-        element: <SingleProduct/>,
+        element: <SingleProduct />,
       },
       {
         path: "/my-carts",
-        element: <MyCarts/>,
-      },
-      
-      {
-        path: "*",
-        element: <P404/>,
+        element: <MyCarts />,
       },
 
+      {
+        path: "/reset-password",
+        element: <ResetPassword />,
+      },
+      {
+        path: "*",
+        element: <P404 />,
+      },
     ],
-  }
+  },
+  {
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children : [
+      {
+        path: "/dashboard",
+        element: <DashboardHome />,
+      },
+      {
+        path: "/dashboard/users",
+        element: <AllUsers />,
+      },
+    ]
+  },
 ]);
 
 export default routes;
