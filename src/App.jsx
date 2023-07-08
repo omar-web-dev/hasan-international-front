@@ -4,13 +4,17 @@ import { Provider } from "react-redux";
 import { store } from "./Components/reducer/store";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AuthProvider } from "./context/AuthContext";
+import "./api/globalAxios"
 
 function App() {
   return (
     <div>
       <Provider store={store}>
-        <RouterProvider router={routes} />
-        <ToastContainer />
+        <AuthProvider>
+          <RouterProvider router={routes} />
+          <ToastContainer />
+        </AuthProvider>
       </Provider>
     </div>
   );

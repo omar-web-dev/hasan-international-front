@@ -14,6 +14,7 @@ import ResetPassword from "../Components/ResetPassword";
 import DashboardLayout from "../Layout/Dashboard/Dashboard";
 import AllUsers from "../Components/deshbord/AllUsers";
 import DashboardHome from "../Layout/Dashboard/DashboardHome";
+import PrivateRoute from "./PrivateRoute";
 
 const routes = createBrowserRouter([
   {
@@ -74,8 +75,11 @@ const routes = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <DashboardLayout />,
-    children : [
+    element: <PrivateRoute>
+      <DashboardLayout />
+    </PrivateRoute>
+    ,
+    children: [
       {
         path: "/dashboard",
         element: <DashboardHome />,

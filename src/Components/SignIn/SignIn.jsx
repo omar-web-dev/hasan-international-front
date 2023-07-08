@@ -1,8 +1,8 @@
-import axios from "axios";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { useAuth } from "../../hooks/useAuth";
 
 const SingIn = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -17,15 +17,17 @@ const SingIn = () => {
     formState: { errors, isValid },
   } = useForm({ mode: "onChange" });
 
+  const navigate = useNavigate();
+
+  const { userLogin } = useAuth();
+
   const handleSignIn = async (data) => {
     try {
-      const response = await axios.post(
-        "http://localhost:5000/api/v1/auth/login",
-        data
-      );
-      toast.success(response?.data?.message);
-      const token = response?.data?.data?.token;
-      localStorage.setItem("token", token);
+      const response = await userLogin(data.email, data.password, true);
+      if (response.success) {
+        toast.success(response.message);
+        navigate("/");
+      }
     } catch (error) {
       toast.error(error?.response?.data?.message);
     }
@@ -50,9 +52,8 @@ const SingIn = () => {
                   },
                 })}
                 type="email"
-                className={` ${
-                  errors?.email ? " border-red-300" : "border-gray-300"
-                } outline-none w-full p-2 border border-gray-300 rounded-md`}
+                className={` ${errors?.email ? " border-red-300" : "border-gray-300"
+                  } outline-none w-full p-2 border border-gray-300 rounded-md`}
                 placeholder="jimi.uae@gmail.com"
               />
               {errors.email && (
@@ -69,26 +70,9 @@ const SingIn = () => {
               </label>
               <input
                 type={showPassword ? "text" : "password"}
-                {...register("password", {
-                  required: "Password is required",
-                  minLength: {
-                    value: 6,
-                    message: "Password must be at least 6 characters",
-                  },
-                  maxLength: {
-                    value: 10,
-                    message: "Password must not exceed 10 characters",
-                  },
-                  pattern: {
-                    value:
-                      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/,
-                    message:
-                      "one uppercase, one lowercase, one number, and one special character",
-                  },
-                })}
-                className={` ${
-                  errors?.password ? " border-red-300" : "border-gray-300"
-                } outline-none w-full p-2 border border-gray-300 rounded-md`}
+                {...register("password")}
+                className={` ${errors?.password ? " border-red-300" : "border-gray-300"
+                  } outline-none w-full p-2 border border-gray-300 rounded-md`}
                 placeholder="********"
               />
             </div>
@@ -107,11 +91,10 @@ const SingIn = () => {
             <button
               type="submit"
               disabled={!isValid}
-              className={`w-full py-2 px-4 ${
-                isValid
-                  ? "bg-blue-500 hover:bg-blue-600"
-                  : "bg-gray-500 cursor-not-allowed"
-              } bg-blue-500 text-white rounded-md `}
+              className={`w-full py-2 px-4 ${isValid
+                ? "bg-blue-500 hover:bg-blue-600"
+                : "bg-gray-500 cursor-not-allowed"
+                } bg-blue-500 text-white rounded-md `}
             >
               Submit
             </button>
